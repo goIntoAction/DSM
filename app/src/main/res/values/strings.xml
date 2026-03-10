@@ -1,0 +1,2132 @@
+<resources>
+    <string name="app_name">DSM</string>
+
+    <!-- 通用 -->
+    <string name="common_confirm">确认</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_delete">删除</string>
+    <string name="common_optional">可选</string>
+    <string name="common_edit">编辑</string>
+    <string name="common_save">保存</string>
+    <string name="common_done">完成</string>
+    <string name="common_back">返回</string>
+    <string name="common_loading">加载中…</string>
+    <string name="common_retry">重试</string>
+    <string name="common_copy">复制</string>
+    <string name="common_remove">移除</string>
+    <string name="common_create">创建</string>
+    <string name="common_add">添加</string>
+    <string name="common_running">运行中</string>
+    <string name="common_stopped">已停止</string>
+    <string name="common_error">错误</string>
+    <string name="common_warning">警告</string>
+    <string name="common_info">信息</string>
+    <string name="common_all">全部</string>
+    <string name="common_version">版本</string>
+    <string name="common_build">构建</string>
+    <string name="common_unknown">未知</string>
+    <string name="common_share">共享</string>
+    <string name="common_details">详情</string>
+    <string name="common_start">启动</string>
+    <string name="common_stop">停止</string>
+    <string name="common_restart">重启</string>
+    <string name="common_password">密码</string>
+    <string name="common_next">下一个</string>
+    <string name="common_enabled">启用</string>
+    <string name="common_disabled">禁用</string>
+    <string name="common_refresh">刷新</string>
+    <string name="common_coming_soon">功能开发中</string>
+    <string name="common_more">更多</string>
+    <string name="common_open">打开</string>
+    <string name="common_close">关闭</string>
+    <string name="common_load_failed">加载失败</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_confirm_shutdown">确认关机</string>
+    <string name="dashboard_confirm_reboot">确认重启</string>
+    <string name="dashboard_shutdown_message">确定要关闭 DSM 服务器吗？此操作将中断所有正在进行的任务。</string>
+    <string name="dashboard_reboot_message">确定要重启 DSM 服务器吗？此操作将中断所有正在进行的任务。</string>
+    <string name="dashboard_console">控制台</string>
+    <string name="dashboard_search">搜索</string>
+    <string name="dashboard_refresh">刷新</string>
+    <string name="dashboard_loading_system_info">正在加载系统信息…</string>
+    <string name="dashboard_load_failed">加载失败</string>
+    <string name="dashboard_storage">存储空间</string>
+    <string name="dashboard_disk_status">磁盘状态</string>
+    <string name="dashboard_network">网络</string>
+    <string name="dashboard_quick_actions">快捷操作</string>
+    <string name="dashboard_apps">应用</string>
+    <string name="dashboard_app_photos">照片</string>
+    <string name="dashboard_app_docker">Docker</string>
+    <string name="dashboard_app_download">下载站</string>
+    <string name="dashboard_app_packages">套件中心</string>
+    <string name="dashboard_app_file">文件管理</string>
+    <string name="dashboard_app_virtual_machine">虚拟机</string>
+    <string name="dashboard_app_backup">备份</string>
+    <string name="dashboard_app_media_index">媒体索引</string>
+    <string name="dashboard_app_xunlei">迅雷</string>
+    <string name="dashboard_app_cloud_sync">Cloud Sync</string>
+    <string name="dashboard_app_drive">Drive</string>
+    <string name="dashboard_app_video">视频站</string>
+    <string name="dashboard_app_active_insight">Active Insight</string>
+    <string name="dashboard_app_codec_pack">编解码器</string>
+    <string name="dashboard_app_easy_tier">EasyTier</string>
+    <string name="dashboard_app_mail_plus">MailPlus</string>
+    <string name="dashboard_app_mail_server">邮件服务器</string>
+    <string name="dashboard_app_webdav">WebDAV</string>
+    <string name="dashboard_app_text_editor">文本编辑器</string>
+    <string name="dashboard_good_morning">早上好</string>
+    <string name="dashboard_good_afternoon">下午好</string>
+    <string name="dashboard_good_evening">晚上好</string>
+    <string name="dashboard_default_model">群晖 NAS</string>
+    <string name="dashboard_hostname">主机名</string>
+    <string name="dashboard_uptime">运行时间</string>
+    <string name="dashboard_temperature">温度</string>
+    <string name="dashboard_temperature_warning">温度警告</string>
+    <string name="dashboard_memory">内存</string>
+    <string name="dashboard_status_normal">正常</string>
+    <string name="dashboard_status_degrade">降级</string>
+    <string name="dashboard_used">已用</string>
+    <string name="dashboard_available">可用</string>
+    <string name="dashboard_total">总计</string>
+    <string name="dashboard_disk_name">磁盘 %1$s</string>
+    <string name="dashboard_network_interface">网络接口</string>
+    <string name="dashboard_download">下载</string>
+    <string name="dashboard_upload">上传</string>
+    <string name="dashboard_shutdown">关机</string>
+    <string name="dashboard_reboot">重启</string>
+    <string name="dashboard_users">用户</string>
+    <string name="dashboard_control_panel">控制面板</string>
+    <string name="dashboard_performance">性能监控</string>
+    <string name="dashboard_notifications">通知</string>
+    <string name="dashboard_uptime_format">%1$d天 %2$d时 %3$d分</string>
+    <string name="dashboard_uptime_format_no_days">%1$d时 %2$d分</string>
+
+    <!-- Docker -->
+    <string name="docker_containers">Docker 容器</string>
+    <string name="docker_image_management">镜像管理</string>
+    <string name="docker_network_management">网络管理</string>
+    <string name="docker_no_containers">没有容器</string>
+    <string name="docker_running_count">运行中 %1$d</string>
+    <string name="docker_stopped_count">已停止 %1$d</string>
+    <string name="docker_more">更多</string>
+
+    <!-- Login -->
+    <string name="login_account_management">账户管理</string>
+    <string name="login_app_title">群晖助手</string>
+    <string name="login_subtitle">连接您的群晖 NAS</string>
+    <string name="login_server_address">服务器地址</string>
+    <string name="login_server_address_hint">例如: 192.168.1.100</string>
+    <string name="login_username">用户名</string>
+    <string name="login_username_hint">输入用户名</string>
+    <string name="login_password_label">密码</string>
+    <string name="login_password_hint">输入密码</string>
+    <string name="login_hide_password">隐藏密码</string>
+    <string name="login_show_password">显示密码</string>
+    <string name="login_otp_label">OTP 验证码</string>
+    <string name="login_otp_hint">输入6位验证码</string>
+    <string name="login_remember_device">记住此设备（下次免验证 OTP）</string>
+    <string name="login_ignore_ssl_error">忽略 SSL 证书错误</string>
+    <string name="login_logging_in">正在登录...</string>
+    <string name="login_button">登录</string>
+    <string name="login_help_title">支持的地址格式</string>
+    <string name="login_help_formats">• IP 地址: 192.168.1.100\n• 域名: mynas.local\n• QuickConnect ID: mynas</string>
+    <string name="login_help_default_protocol">默认使用 HTTPS (端口 5001)\n添加 http:// 前缀使用 HTTP</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">账户管理</string>
+    <string name="accounts_add">添加</string>
+    <string name="accounts_loading">加载中...</string>
+    <string name="accounts_empty">没有保存的账户</string>
+    <string name="accounts_current">当前</string>
+    <string name="accounts_switch">切换</string>
+    <string name="accounts_edit">编辑</string>
+    <string name="accounts_delete_title">删除账户</string>
+    <string name="accounts_delete_message">确定要删除账户 \"%1$s\" 吗？</string>
+    <string name="accounts_add_title">添加账户</string>
+    <string name="accounts_edit_title">编辑账户</string>
+    <string name="accounts_name_label">名称</string>
+    <string name="accounts_name_hint">例如：家里NAS</string>
+    <string name="accounts_address_label">地址</string>
+    <string name="accounts_address_hint">例如：192.168.1.1 或 nas.example.com</string>
+    <string name="accounts_port_label">端口</string>
+    <string name="accounts_username_label">用户名</string>
+    <string name="accounts_password_label">密码</string>
+    <string name="accounts_confirm">确定</string>
+
+    <!-- Setting -->
+    <string name="setting_title">设置</string>
+    <string name="setting_section_appearance">外观</string>
+    <string name="setting_dark_mode">深色模式</string>
+    <string name="setting_dark_mode_light">浅色</string>
+    <string name="setting_dark_mode_dark">深色</string>
+    <string name="setting_dark_mode_system">跟随系统</string>
+    <string name="setting_choose_theme">选择主题</string>
+    <string name="setting_vibration_feedback">震动反馈</string>
+    <string name="setting_section_preferences">首选项</string>
+    <string name="setting_preferences">首选项设置</string>
+    <string name="setting_section_download">下载</string>
+    <string name="setting_wifi_only_download">仅 WiFi 下载</string>
+    <string name="setting_section_security">安全</string>
+    <string name="setting_ssl_verification">SSL 证书验证</string>
+    <string name="setting_launch_auth">启动认证</string>
+    <string name="setting_section_advanced">高级功能</string>
+    <string name="setting_docker_subtitle">容器管理</string>
+    <string name="setting_packages">套件中心</string>
+    <string name="setting_packages_subtitle">安装和管理套件</string>
+    <string name="setting_virtual_machine">虚拟机</string>
+    <string name="setting_smart_test">SMART 测试</string>
+    <string name="setting_smart_test_subtitle">磁盘健康检测</string>
+    <string name="setting_backup">备份管理</string>
+    <string name="setting_backup_subtitle">数据备份与恢复</string>
+    <string name="setting_section_other">其他</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_about_subtitle">版本 %1$s</string>
+    <string name="setting_feedback">反馈</string>
+    <string name="setting_feedback_subtitle">问题和建议</string>
+    <string name="setting_logout">退出登录</string>
+
+    <!-- Preferences -->
+    <string name="preferences_title">首选项</string>
+    <string name="preferences_section_appearance">外观</string>
+    <string name="preferences_dark_mode">深色模式</string>
+    <string name="preferences_dark_mode_light">浅色</string>
+    <string name="preferences_dark_mode_dark">深色</string>
+    <string name="preferences_dark_mode_system">跟随系统</string>
+    <string name="preferences_select">选择</string>
+    <string name="preferences_section_security">安全</string>
+    <string name="preferences_launch_auth">启动认证</string>
+    <string name="preferences_launch_auth_subtitle">打开应用时需要验证</string>
+    <string name="preferences_use_password">使用密码</string>
+    <string name="preferences_use_biometrics">使用生物识别</string>
+    <string name="preferences_section_sync">同步</string>
+    <string name="preferences_refresh_interval">刷新间隔</string>
+    <string name="preferences_refresh_seconds">%1$d秒</string>
+    <string name="preferences_decrease">减少</string>
+    <string name="preferences_increase">增加</string>
+    <string name="preferences_section_download">下载</string>
+    <string name="preferences_wifi_only_download">仅WiFi下载</string>
+    <string name="preferences_wifi_only_subtitle">仅在连接WiFi时下载文件</string>
+    <string name="preferences_section_connection">连接</string>
+    <string name="preferences_verify_ssl">验证SSL证书</string>
+    <string name="preferences_verify_ssl_subtitle">验证服务器SSL证书</string>
+    <string name="preferences_section_notification">通知</string>
+    <string name="preferences_vibration_alert">振动提醒</string>
+    <string name="preferences_vibration_subtitle">操作完成时振动</string>
+    <string name="preferences_section_about">关于</string>
+
+    <!-- File - FileScreen -->
+    <string name="file_files">文件</string>
+    <string name="file_loading_files">正在加载文件…</string>
+    <string name="file_folder_empty">文件夹为空</string>
+    <string name="file_download_file">下载文件</string>
+    <string name="file_download_unsupported_preview">此文件类型暂不支持预览，是否下载到本地？</string>
+    <string name="file_download">下载</string>
+    <string name="file_open">打开</string>
+    <string name="file_sort">排序</string>
+    <string name="file_switch_view">切换视图</string>
+    <string name="file_more">更多</string>
+    <string name="file_favorites">收藏夹</string>
+    <string name="file_share_manager">分享管理</string>
+    <string name="file_upload">上传</string>
+
+    <!-- File - FileDetailScreen -->
+    <string name="file_detail">文件详情</string>
+    <string name="file_rename">重命名</string>
+    <string name="file_basic_info">基本信息</string>
+    <string name="file_type">类型</string>
+    <string name="file_type_folder">文件夹</string>
+    <string name="file_type_file">文件</string>
+    <string name="file_size">大小</string>
+    <string name="file_modified_time">修改时间</string>
+    <string name="file_created_time">创建时间</string>
+    <string name="file_accessed_time">访问时间</string>
+    <string name="file_owner">所有者</string>
+    <string name="file_path_label">路径</string>
+    <string name="file_permission">权限</string>
+    <string name="file_perm_read">读取</string>
+    <string name="file_perm_write">写入</string>
+    <string name="file_perm_exec">执行</string>
+    <string name="file_favorited">已收藏</string>
+    <string name="file_favorite">收藏</string>
+    <string name="file_play_video">播放视频</string>
+    <string name="file_play_audio">播放音频</string>
+    <string name="file_create_share_link">创建分享链接</string>
+    <string name="file_new_name">新名称</string>
+    <string name="file_delete_confirm_title">删除确认</string>
+    <string name="file_delete_confirm_message">确定要删除 \"%1$s\" 吗？此操作无法撤销。</string>
+    <string name="file_share_file">分享文件</string>
+    <string name="file_creating_share_link">正在创建分享链接…</string>
+    <string name="file_link_copied">链接已复制</string>
+
+    <!-- File - FileUploadScreen -->
+    <string name="file_upload_title">上传文件</string>
+    <string name="file_clear_completed">清除已完成</string>
+    <string name="file_target_path">目标路径</string>
+    <string name="file_select_files">选择要上传的文件</string>
+    <string name="file_add_files">添加文件</string>
+    <string name="file_uploading">上传中…</string>
+    <string name="file_start_upload">开始上传</string>
+    <string name="file_status_pending">等待中</string>
+    <string name="file_status_completed">已完成</string>
+    <string name="file_status_failed">上传失败</string>
+    <string name="file_status_cancelled">已取消</string>
+
+    <!-- File - FileSearchScreen -->
+    <string name="file_search_title">搜索文件</string>
+    <string name="file_cancel_search">取消搜索</string>
+    <string name="file_search_keyword">搜索关键字</string>
+    <string name="file_search_placeholder">输入文件名或关键字</string>
+    <string name="file_search_clear">清除</string>
+    <string name="file_search_location">搜索位置</string>
+    <string name="file_search_include_subdir">包含子目录</string>
+    <string name="file_search_content">搜索内容</string>
+    <string name="file_searching">搜索中…</string>
+    <string name="file_start_search">开始搜索</string>
+    <string name="file_search_failed">搜索失败</string>
+    <string name="file_search_hint">输入关键字开始搜索</string>
+    <string name="file_search_no_results">未找到匹配的文件</string>
+    <string name="file_search_result_count">找到 %1$d 个结果</string>
+    <string name="file_searching_progress">正在搜索… 已找到 %1$d 个结果</string>
+    <string name="file_search_progress_percent">搜索中... %1$d%%</string>
+    <string name="file_search_found_results">已找到 %1$d 个结果</string>
+    <string name="file_search_task_id_failed">获取任务ID失败</string>
+
+    <!-- File - FileImageViewerScreen -->
+    <string name="file_image_preview">图片预览</string>
+    <string name="file_image_load_failed">无法加载图片</string>
+
+    <!-- File - FavoriteScreen -->
+    <string name="file_favorites_title">收藏夹</string>
+    <string name="file_no_favorites">暂无收藏</string>
+    <string name="file_cancel_favorite">取消收藏</string>
+    <string name="file_cancel_favorite_confirm">确定要取消收藏 \"%1$s\" 吗？</string>
+    <string name="file_rename_title">重命名</string>
+    <string name="file_new_name_label">新名称</string>
+    <string name="file_more_options">更多</string>
+
+    <!-- File - ShareManagerScreen -->
+    <string name="file_share_links">共享链接</string>
+    <string name="file_no_share_links">暂无共享链接</string>
+    <string name="file_copy_link">复制链接</string>
+    <string name="file_delete_link">删除链接</string>
+    <string name="file_expired">已过期</string>
+    <string name="file_expire_date">过期: %1$s</string>
+    <string name="file_never_expire">永不过期</string>
+    <string name="file_delete_share_title">删除共享链接</string>
+    <string name="file_delete_share_confirm">确定要删除 \"%1$s\" 的共享链接吗？</string>
+    <string name="file_collapse">收起</string>
+    <string name="file_expand">展开</string>
+
+    <!-- FileDialogs -->
+    <string name="file_new_folder">新建文件夹</string>
+    <string name="file_folder_name">文件夹名称</string>
+    <string name="file_operating">操作中</string>
+    <string name="file_copy_to">复制到…</string>
+    <string name="file_move_to">移动到…</string>
+    <string name="file_share_action">分享</string>
+    <string name="file_compress">压缩</string>
+    <string name="file_compress_title">压缩文件</string>
+    <string name="file_compress_filename">文件名</string>
+    <string name="file_copy">复制</string>
+    <string name="file_move">移动</string>
+    <string name="file_selected_count">已选择 %1$d 项</string>
+    <string name="file_select_all">全选</string>
+    <string name="file_deselect_all">取消全选</string>
+    <string name="file_multi_select">多选模式</string>
+    <string name="file_select_folder">选择文件夹</string>
+    <string name="file_current_folder">当前位置</string>
+    <string name="file_add_to_favorite">添加到收藏</string>
+    <string name="file_delete_single_confirm">确定要删除 \"%1$s\" 吗？</string>
+    <string name="file_delete_multi_confirm">确定要删除 %1$d 个项目吗？</string>
+    <string name="file_and_more">… 还有 %1$d 个</string>
+
+    <!-- Performance -->
+    <string name="performance_title">性能监控</string>
+    <string name="performance_more">更多</string>
+    <string name="performance_history">历史记录</string>
+    <string name="performance_process_manager">进程管理</string>
+    <string name="performance_tab_cpu">CPU</string>
+    <string name="performance_tab_memory">内存</string>
+    <string name="performance_tab_network">网络</string>
+    <string name="performance_tab_disk">磁盘</string>
+    <string name="performance_tab_volume">存储</string>
+    <string name="performance_cpu_usage">CPU 使用率</string>
+    <string name="performance_usage_trend">使用率趋势</string>
+    <string name="performance_loading_data">加载数据中...</string>
+    <string name="performance_memory_usage">内存使用率</string>
+    <string name="performance_network_speed">网络速度</string>
+    <string name="performance_download">下载</string>
+    <string name="performance_upload">上传</string>
+    <string name="performance_traffic_trend">流量趋势</string>
+    <string name="performance_disk_io">磁盘IO</string>
+    <string name="performance_read">读取</string>
+    <string name="performance_write">写入</string>
+    <string name="performance_io_trend">IO趋势</string>
+    <string name="performance_volume_io">存储卷IO</string>
+
+    <!-- Download -->
+    <string name="download_management">下载管理</string>
+    <string name="download_add_task">添加任务</string>
+    <string name="download_downloading">下载中</string>
+    <string name="download_finished">已完成</string>
+    <string name="download_paused">已暂停</string>
+    <string name="download_all_with_count">全部 (%1$d)</string>
+    <string name="download_downloading_with_count">下载中 (%1$d)</string>
+    <string name="download_finished_with_count">已完成 (%1$d)</string>
+    <string name="download_paused_with_count">已暂停 (%1$d)</string>
+    <string name="download_loading_tasks">正在加载任务...</string>
+    <string name="download_no_tasks">没有下载任务</string>
+    <string name="download_no_filter_tasks">没有%1$s的任务</string>
+
+    <!-- Download - TaskDetail -->
+    <string name="download_delete_task">删除任务</string>
+    <string name="download_delete_task_confirm">确定要删除此下载任务吗？</string>
+    <string name="download_task_detail">任务详情</string>
+    <string name="download_tab_general">常规</string>
+    <string name="download_tab_transfer">传输</string>
+    <string name="download_filename">文件名</string>
+    <string name="download_type">类型</string>
+    <string name="download_save_location">保存位置</string>
+    <string name="download_file_size">文件大小</string>
+    <string name="download_username">用户名</string>
+    <string name="download_url">网址</string>
+    <string name="download_copied">已复制</string>
+    <string name="download_created_time">创建时间</string>
+    <string name="download_completed_time">完成时间</string>
+    <string name="download_estimated_wait">预计等待</string>
+    <string name="download_status">状态</string>
+    <string name="download_progress">下载进度</string>
+    <string name="download_speed">下载速度</string>
+    <string name="download_upload_speed">上传速度</string>
+    <string name="download_manage_tracker">管理</string>
+    <string name="download_no_tracker">暂无 Tracker 信息</string>
+    <string name="download_no_peer">暂无 Peer 连接</string>
+    <string name="download_peer_count">共 %1$d 个连接</string>
+    <string name="download_view_details">查看详情</string>
+    <string name="download_no_files">暂无文件信息</string>
+    <string name="download_seeds">种子: %1$s</string>
+    <string name="download_peer_progress">进度: %1$d%%</string>
+    <string name="download_priority_high">高</string>
+    <string name="download_priority_low">低</string>
+    <string name="download_priority_normal">普通</string>
+    <string name="download_status_waiting">等待中</string>
+    <string name="download_status_downloading">下载中</string>
+    <string name="download_status_paused">已暂停</string>
+    <string name="download_status_finishing">完成中</string>
+    <string name="download_status_finished">已完成</string>
+    <string name="download_status_checking">检查中</string>
+    <string name="download_status_queued">队列中</string>
+    <string name="download_status_moving">移动中</string>
+    <string name="download_status_error">错误</string>
+    <string name="download_status_no_response">没有响应</string>
+    <string name="download_status_dest_not_exist">目标不存在</string>
+    <string name="download_status_dest_exist">目标已存在</string>
+    <string name="download_status_no_space">空间不足</string>
+    <string name="download_status_invalid_task">无效任务</string>
+    <string name="download_status_unsupported">任务类型不支持</string>
+    <string name="download_status_dest_readonly">目标只读</string>
+    <string name="download_status_system_error">系统错误</string>
+    <string name="download_status_duplicate">重复的任务</string>
+    <string name="download_status_unknown">未知 (%1$d)</string>
+    <string name="download_time_remaining_unknown">未知</string>
+    <string name="download_time_hours_minutes">%1$d小时%2$d分钟</string>
+    <string name="download_time_minutes_seconds">%1$d分钟%2$d秒</string>
+    <string name="download_time_seconds">%1$d秒</string>
+
+    <!-- Download - PeerList -->
+    <string name="download_peer_list">Peer列表</string>
+    <string name="download_stop_auto_refresh">停止自动刷新</string>
+    <string name="download_start_auto_refresh">开启自动刷新</string>
+    <string name="download_sort_progress">进度</string>
+    <string name="download_sort_download">下载</string>
+    <string name="download_sort_upload">上传</string>
+    <string name="download_peer_total">共 %1$d 个Peer</string>
+    <string name="download_loading_peers">加载Peer列表...</string>
+    <string name="download_no_peers">暂无Peer连接</string>
+    <string name="download_downloaded">已下载: %1$s</string>
+    <string name="download_uploaded">已上传: %1$s</string>
+
+    <!-- Download - AddTask -->
+    <string name="download_add_download_task">新建下载任务</string>
+    <string name="download_url_download">URL 下载</string>
+    <string name="download_url_input_label">下载链接</string>
+    <string name="download_url_input_placeholder">输入下载链接，每行一个</string>
+    <string name="download_save_location_label">保存位置</string>
+    <string name="download_start_download">开始下载</string>
+    <string name="download_bt_download">BT 下载</string>
+    <string name="download_select_torrent">选择种子文件</string>
+    <string name="download_torrent_hint">支持 .torrent 种子文件，选择后将自动创建任务并跳转到文件选择页面</string>
+    <string name="download_creating">创建中…</string>
+    <string name="download_create_from_url">从链接创建</string>
+    <string name="download_or">或者</string>
+    <string name="download_url_input_hint">支持 HTTP/FTP/磁力链接，多个链接换行输入</string>
+    <string name="download_select_files">选择下载文件</string>
+    <string name="download_select_all">全选</string>
+    <string name="download_selected_count">已选择 %1$d/%2$d 个文件</string>
+    <string name="download_saving">保存中…</string>
+    <string name="download_save_selection">保存选择</string>
+    <string name="download_loading_files">加载文件列表…</string>
+    <string name="download_no_selectable_files">没有可选择的文件</string>
+    <string name="download_priority_high_label">高优先级</string>
+    <string name="download_priority_low_label">低优先级</string>
+    <string name="download_tracker_management">Tracker 管理</string>
+    <string name="download_add_tracker">添加Tracker</string>
+    <string name="download_loading_trackers">加载Tracker列表…</string>
+    <string name="download_no_trackers">暂无Tracker</string>
+    <string name="download_tracker_status_working">正常</string>
+    <string name="download_tracker_status_error">错误</string>
+    <string name="download_tracker_status_updating">更新中</string>
+    <string name="download_tracker_status_waiting">等待中</string>
+    <string name="download_tracker_url_label">Tracker URL</string>
+    <string name="download_tracker_url_placeholder">输入Tracker地址\n多个地址可换行分隔</string>
+    <string name="download_tab_tracker">Tracker</string>
+    <string name="download_tab_peer">Peer</string>
+    <string name="download_tab_files">文件</string>
+    <string name="download_task_not_found">未找到任务</string>
+    <string name="download_peer_label">Peer: %1$s</string>
+
+    <!-- Control Panel -->
+    <string name="control_panel_title">控制面板</string>
+    <string name="control_panel_group_system">系统</string>
+    <string name="control_panel_info_center">信息中心</string>
+    <string name="control_panel_info_center_desc">系统信息、状态</string>
+    <string name="control_panel_storage">存储管理</string>
+    <string name="control_panel_storage_desc">存储池、磁盘、RAID</string>
+    <string name="control_panel_network">网络</string>
+    <string name="control_panel_network_desc">网络接口、网关</string>
+    <string name="control_panel_terminal">终端机</string>
+    <string name="control_panel_terminal_desc">SSH、Telnet设置</string>
+    <string name="control_panel_power">硬件和电源</string>
+    <string name="control_panel_power_desc">电源管理、风扇</string>
+    <string name="control_panel_external">外部设备</string>
+    <string name="control_panel_external_desc">USB、eSATA设备</string>
+    <string name="control_panel_group_permission">权限</string>
+    <string name="control_panel_users">用户</string>
+    <string name="control_panel_users_desc">用户账户管理</string>
+    <string name="control_panel_groups">用户群组</string>
+    <string name="control_panel_groups_desc">群组管理</string>
+    <string name="control_panel_shares">共享文件夹</string>
+    <string name="control_panel_shares_desc">共享文件夹设置</string>
+    <string name="control_panel_group_file_service">文件服务</string>
+    <string name="control_panel_file_service">文件服务</string>
+    <string name="control_panel_file_service_desc">SMB、FTP、WebDAV等</string>
+    <string name="control_panel_smb_desc">SMB/CIFS设置</string>
+    <string name="control_panel_ftp_desc">FTP服务设置</string>
+    <string name="control_panel_group_security">安全</string>
+    <string name="control_panel_security_advisor">安全顾问</string>
+    <string name="control_panel_security_advisor_desc">安全扫描</string>
+    <string name="control_panel_firewall">防火墙</string>
+    <string name="control_panel_firewall_desc">防火墙规则</string>
+    <string name="control_panel_certificate">证书</string>
+    <string name="control_panel_certificate_desc">SSL证书管理</string>
+    <string name="control_panel_certificate_desc_short">SSL证书</string>
+    <string name="control_panel_group_service">服务</string>
+    <string name="control_panel_ddns">DDNS</string>
+    <string name="control_panel_ddns_desc">动态域名服务</string>
+    <string name="control_panel_ddns_desc_short">动态DNS</string>
+    <string name="control_panel_media_index">媒体索引</string>
+    <string name="control_panel_media_index_desc">媒体文件索引</string>
+    <string name="control_panel_group_system_mgmt">系统管理</string>
+    <string name="control_panel_notification">通知</string>
+    <string name="control_panel_notification_desc">通知设置</string>
+    <string name="control_panel_log_center">日志中心</string>
+    <string name="control_panel_log_center_desc">系统日志</string>
+    <string name="control_panel_task_scheduler">任务计划</string>
+    <string name="control_panel_task_scheduler_desc">计划任务管理</string>
+    <string name="control_panel_task_scheduler_desc_short">定时任务</string>
+    <string name="control_panel_notification_center">通知中心</string>
+    <string name="control_panel_notification_desc_short">系统通知</string>
+
+    <!-- Terminal -->
+    <string name="terminal_title">终端机</string>
+    <string name="terminal_ssh_settings">SSH 设置</string>
+    <string name="terminal_enable_ssh">启用 SSH 服务</string>
+    <string name="terminal_port">端口</string>
+    <string name="terminal_allow_root">允许Root登录</string>
+    <string name="terminal_ssh_key">SSH密钥认证</string>
+    <string name="terminal_max_connections">最大连接数</string>
+    <string name="terminal_active_sessions">活动会话</string>
+    <string name="terminal_no_sessions">暂无活动会话</string>
+    <string name="terminal_user">用户</string>
+    <string name="terminal_source_ip">来源IP</string>
+    <string name="terminal_start_time">开始时间</string>
+    <string name="terminal_edit_settings">编辑设置</string>
+    <string name="terminal_edit_ssh_settings">编辑 SSH 设置</string>
+    <string name="terminal_connections_format">%1$d 个连接</string>
+    <string name="terminal_title_snmp">终端机 &amp; SNMP</string>
+    <string name="terminal_root_login">Root登录</string>
+    <string name="terminal_root_allowed">允许</string>
+    <string name="terminal_root_denied">禁止</string>
+    <string name="terminal_enabled">已启用</string>
+    <string name="terminal_disabled">未启用</string>
+    <string name="terminal_ssh_service">SSH服务</string>
+    <string name="terminal_running_port">运行中 · 端口 %1$d</string>
+    <string name="terminal_enable_ssh_short">启用SSH</string>
+    <string name="terminal_connection_info">连接说明</string>
+    <string name="terminal_connection_hint">使用SSH客户端连接:</string>
+    <string name="terminal_connection_command">ssh 用户名@服务器地址 -p %1$d</string>
+    <string name="terminal_status_enabled">启用</string>
+    <string name="terminal_status_disabled">禁用</string>
+    <string name="terminal_started_at">开始于 %1$s</string>
+    <string name="terminal_disconnect">断开连接</string>
+    <string name="terminal_edit">编辑</string>
+    <string name="terminal_ssh_terminal">SSH终端</string>
+    <string name="terminal_confirm_disconnect">确定要断开SSH连接吗？</string>
+    <string name="terminal_connect_to_dsm">连接到您的DSM服务器</string>
+    <string name="terminal_new_connection">新建连接</string>
+    <string name="terminal_ssh_connection">SSH连接</string>
+    <string name="terminal_host_address">主机地址</string>
+    <string name="terminal_host_placeholder">例如: 192.168.1.100</string>
+    <string name="terminal_connect">连接</string>
+    <string name="terminal_connecting">连接中...</string>
+    <string name="terminal_reconnecting">重新连接中...</string>
+    <string name="terminal_show_password">显示密码</string>
+    <string name="terminal_hide_password">隐藏密码</string>
+
+    <!-- Power -->
+    <string name="power_title">硬件和电源</string>
+    <string name="power_general_settings">常规设置</string>
+    <string name="power_auto_power_on">断电后自动开机</string>
+    <string name="power_beep_on_alert">警报时蜂鸣</string>
+    <string name="power_schedule">电源计划</string>
+    <string name="power_no_schedule">暂无电源计划</string>
+    <string name="power_shutdown_type">关机</string>
+    <string name="power_startup_type">开机</string>
+    <string name="power_time_format">%1$02d:%2$02d</string>
+    <string name="power_days_format">每周 %1$s</string>
+    <string name="power_everyday">每天</string>
+    <string name="power_day_mon">一</string>
+    <string name="power_day_tue">二</string>
+    <string name="power_day_wed">三</string>
+    <string name="power_day_thu">四</string>
+    <string name="power_day_fri">五</string>
+    <string name="power_day_sat">六</string>
+    <string name="power_day_sun">日</string>
+    <string name="power_ups_info">UPS 信息</string>
+    <string name="power_ups_not_connected">未连接 UPS</string>
+    <string name="power_ups_model">型号</string>
+    <string name="power_ups_status">状态</string>
+    <string name="power_ups_battery">电池电量</string>
+    <string name="power_ups_load">负载</string>
+    <string name="power_ups_runtime">剩余时间</string>
+    <string name="power_ups_runtime_minutes">%1$d 分钟</string>
+    <string name="power_actions">电源操作</string>
+    <string name="power_confirm_shutdown">确认关机</string>
+    <string name="power_confirm_shutdown_message">确定要关闭 NAS 吗？</string>
+    <string name="power_confirm_reboot">确认重启</string>
+    <string name="power_confirm_reboot_message">确定要重启 NAS 吗？</string>
+    <string name="power_control">电源控制</string>
+    <string name="power_options">电源选项</string>
+    <string name="power_auto_power_on_desc">恢复供电后自动启动系统</string>
+    <string name="power_beep_on_alert_label">报警蜂鸣</string>
+    <string name="power_beep_on_alert_desc">系统异常时发出蜂鸣声</string>
+    <string name="power_ups_title">UPS 不间断电源</string>
+    <string name="power_ups_not_connected_device">未连接 UPS 设备</string>
+    <string name="power_ups_online">市电供电</string>
+    <string name="power_ups_on_battery">电池供电</string>
+    <string name="power_ups_estimated_runtime">预估运行时间</string>
+    <string name="power_ups_runtime_format">%1$d 分钟</string>
+    <string name="power_schedule_boot">定时开机</string>
+    <string name="power_schedule_shutdown">定时关机</string>
+    <string name="power_confirm_shutdown_message_full">确定要关闭 NAS 吗？关机后需要手动启动设备。</string>
+
+    <!-- Users -->
+    <string name="users_title">用户管理</string>
+    <string name="users_total_count">共 %1$d 个用户</string>
+    <string name="users_no_users">暂无用户</string>
+    <string name="users_uid">UID: %1$d</string>
+    <string name="users_expired">已过期</string>
+    <string name="users_normal">正常</string>
+    <string name="users_confirm_delete">确认删除</string>
+    <string name="users_confirm_delete_message">确定要删除用户 \"%1$s\" 吗？此操作不可恢复。</string>
+    <string name="users_create_user">创建用户</string>
+    <string name="users_username">用户名</string>
+    <string name="users_description">描述</string>
+    <string name="users_email">邮箱</string>
+    <string name="users_confirm_password">确认密码</string>
+    <string name="users_password_required">请输入用户名和密码</string>
+    <string name="users_password_mismatch">两次密码不一致</string>
+    <string name="users_password_too_short">密码至少6位</string>
+    <string name="users_edit_user">编辑用户</string>
+    <string name="users_new_password">新密码</string>
+    <string name="users_new_password_hint">留空则不修改</string>
+    <string name="users_edit_password_too_short">密码至少6位</string>
+    <string name="users_edit_password_mismatch">两次密码不一致</string>
+    <string name="users_delete_title">删除用户</string>
+    <string name="users_delete_message">确定要删除用户 \"%1$s\" 吗？此操作无法撤销。</string>
+    <string name="users_add_user">添加用户</string>
+    <string name="users_no_users_display">没有用户</string>
+    <string name="users_edit_title">编辑用户: %1$s</string>
+    <string name="users_email_optional">邮箱（可选）</string>
+    <string name="users_description_optional">描述（可选）</string>
+    <string name="users_modify_password_section">修改密码（留空保持不变）</string>
+    <string name="users_confirm_new_password">确认新密码</string>
+    <string name="users_password_label">密码</string>
+    <string name="users_create_success">用户创建成功</string>
+    <string name="users_update_success">用户更新成功</string>
+    <string name="users_delete_success">用户删除成功</string>
+    <string name="users_create_failed">创建失败</string>
+    <string name="users_update_failed">更新失败</string>
+    <string name="users_delete_failed">删除失败</string>
+    <string name="users_enter_username">请输入用户名</string>
+    <string name="users_enter_password">请输入密码</string>
+
+    <!-- Shared Folders -->
+    <string name="shared_folders_title">共享文件夹</string>
+    <string name="shared_folders_total_count">共 %1$d 个共享文件夹</string>
+    <string name="shared_folders_no_shares">暂无共享文件夹</string>
+    <string name="shared_folders_path">路径</string>
+    <string name="shared_folders_volume">存储空间</string>
+    <string name="shared_folders_hidden">隐藏</string>
+    <string name="shared_folders_encrypted">加密</string>
+    <string name="shared_folders_recycle_bin">回收站</string>
+    <string name="shared_folders_acl_mode">ACL</string>
+    <string name="shared_folders_quota">配额</string>
+    <string name="shared_folders_quota_format">%1$s / %2$s</string>
+    <string name="shared_folders_settings">文件夹设置</string>
+    <string name="shared_folders_hide_unreadable">隐藏无权限的文件夹</string>
+    <string name="shared_folders_recycle_bin_admin_only">仅管理员可访问回收站</string>
+    <string name="shared_folders_cow">写时复制 (CoW)</string>
+    <string name="shared_folders_compress">数据压缩</string>
+    <string name="shared_folders_confirm_delete">确认删除</string>
+    <string name="shared_folders_confirm_delete_message">确定要删除共享文件夹 \"%1$s\" 吗？此操作不可恢复。</string>
+
+    <!-- Media Index -->
+    <string name="media_index_title">媒体索引</string>
+    <string name="media_index_status">索引状态</string>
+    <string name="media_index_indexing">正在索引…</string>
+    <string name="media_index_idle">空闲</string>
+    <string name="media_index_indexed_files">已索引文件</string>
+    <string name="media_index_indexed_format">%1$d / %2$d</string>
+    <string name="media_index_reindex">重新索引</string>
+    <string name="media_index_settings">索引设置</string>
+    <string name="media_index_auto_index">自动索引</string>
+    <string name="media_index_auto_index_desc">新文件添加时自动索引</string>
+    <string name="media_index_video">视频索引</string>
+    <string name="media_index_photo">照片索引</string>
+    <string name="media_index_music">音乐索引</string>
+    <string name="media_index_folders">索引文件夹</string>
+    <string name="media_index_no_folders">暂无索引文件夹</string>
+    <string name="media_index_file_count">%1$d 个文件</string>
+    <string name="media_index_confirm_reindex">确认重新索引</string>
+    <string name="media_index_confirm_reindex_message">重新索引将扫描所有媒体文件，可能需要较长时间。确定要继续吗？</string>
+    <string name="media_index_media_type">媒体类型</string>
+    <string name="media_index_video_label">视频</string>
+    <string name="media_index_photo_label">图片</string>
+    <string name="media_index_music_label">音乐</string>
+    <string name="media_index_auto_index_detect_desc">自动检测新文件并添加到索引</string>
+    <string name="media_index_loading">加载媒体索引设置…</string>
+    <string name="media_index_rebuild">重建索引</string>
+    <string name="media_index_rebuild_title">重建媒体索引</string>
+    <string name="media_index_rebuild_message">确定要重建媒体索引吗？这将重新扫描所有媒体文件夹，可能需要较长时间。</string>
+    <string name="media_index_start_rebuild">开始重建</string>
+    <string name="media_index_indexing_label">索引中</string>
+    <string name="media_index_progress">进度</string>
+    <string name="media_index_total_files">%1$d 个文件</string>
+    <string name="media_index_save">保存</string>
+
+    <!-- FTP -->
+    <string name="ftp_title">FTP</string>
+    <string name="ftp_service">FTP 服务</string>
+    <string name="ftp_running_port">运行中 · 端口 %1$d</string>
+    <string name="ftp_stopped">已停止</string>
+    <string name="ftp_port_settings">端口设置</string>
+    <string name="ftp_port">FTP 端口</string>
+    <string name="ftp_ssl_port">FTP over SSL 端口</string>
+    <string name="ftp_connection_settings">连接设置</string>
+    <string name="ftp_passive_mode">被动模式 (PASV)</string>
+    <string name="ftp_passive_mode_desc">适用于防火墙环境</string>
+    <string name="ftp_passive_port_range">被动端口范围</string>
+    <string name="ftp_utf8">UTF-8 编码</string>
+    <string name="ftp_utf8_desc">支持中文文件名</string>
+    <string name="ftp_security_settings">安全设置</string>
+    <string name="ftp_ssl_tls">FTP over SSL/TLS</string>
+    <string name="ftp_ssl_tls_desc">加密传输数据</string>
+    <string name="ftp_anonymous_login">匿名登录</string>
+    <string name="ftp_anonymous_login_desc">允许匿名用户访问</string>
+    <string name="ftp_connection_info">连接信息</string>
+    <string name="ftp_current_connections">当前连接</string>
+    <string name="ftp_security_tip">安全提示</string>
+    <string name="ftp_security_tip_message">FTP 协议以明文传输数据，建议启用 SSL/TLS 加密或使用更安全的替代方案（如 SFTP 或 WebDAV）。</string>
+
+    <!-- Task Scheduler -->
+    <string name="task_scheduler_title">任务计划</string>
+    <string name="task_scheduler_add">添加</string>
+    <string name="task_scheduler_no_tasks">没有计划任务</string>
+    <string name="task_scheduler_status_running">运行中</string>
+    <string name="task_scheduler_status_success">成功</string>
+    <string name="task_scheduler_status_failed">失败</string>
+    <string name="task_scheduler_status_waiting">等待中</string>
+    <string name="task_scheduler_last_run">上次执行</string>
+    <string name="task_scheduler_next_run">下次执行</string>
+    <string name="task_scheduler_run">运行</string>
+
+    <!-- Firewall -->
+    <string name="firewall_title">防火墙</string>
+    <string name="firewall_status">防火墙状态</string>
+    <string name="firewall_enabled">已启用</string>
+    <string name="firewall_disabled">已禁用</string>
+    <string name="firewall_enable">启用防火墙</string>
+    <string name="firewall_rules">防火墙规则</string>
+    <string name="firewall_rules_count">%1$d 条规则</string>
+    <string name="firewall_no_rules">暂无防火墙规则</string>
+    <string name="firewall_action_allow">允许</string>
+    <string name="firewall_action_deny">拒绝</string>
+    <string name="firewall_protocol">协议</string>
+    <string name="firewall_port">端口</string>
+    <string name="firewall_source_ip">源IP</string>
+    <string name="firewall_add_rule">添加规则</string>
+    <string name="firewall_rule_name">规则名称</string>
+    <string name="firewall_action">动作</string>
+    <string name="firewall_source_ip_optional">源IP (可选)</string>
+    <string name="firewall_dest_port">目标端口</string>
+
+    <!-- DDNS -->
+    <string name="ddns_title">DDNS</string>
+    <string name="ddns_records">DDNS 记录</string>
+    <string name="ddns_no_records">暂无 DDNS 记录</string>
+    <string name="ddns_no_records_short">没有DDNS记录</string>
+    <string name="ddns_provider">服务商</string>
+    <string name="ddns_provider_label">提供商</string>
+    <string name="ddns_provider_format">提供商: %1$s</string>
+    <string name="ddns_external_ip">外部IP</string>
+    <string name="ddns_last_update">最后更新</string>
+    <string name="ddns_status_normal">正常</string>
+    <string name="ddns_status_failed">失败</string>
+    <string name="ddns_update_now">立即更新</string>
+    <string name="ddns_add_record">添加 DDNS 记录</string>
+    <string name="ddns_add_title">添加DDNS</string>
+    <string name="ddns_add_button">添加DDNS</string>
+    <string name="ddns_hostname">主机名</string>
+    <string name="ddns_hostname_placeholder">例如: mynas.ddns.net</string>
+    <string name="ddns_username">用户名</string>
+    <string name="ddns_username_email">用户名/邮箱</string>
+    <string name="ddns_password_token">密码/Token</string>
+    <string name="ddns_confirm_delete">确认删除</string>
+    <string name="ddns_confirm_delete_message">确定要删除 DDNS 记录 \"%1$s\" 吗？</string>
+    <string name="ddns_edit_title">编辑DDNS</string>
+    <string name="ddns_password_optional">密码 (留空保持不变)</string>
+    <string name="ddns_update_success">DDNS 更新成功</string>
+
+    <!-- SMB Settings -->
+    <string name="smb_title">SMB 设置</string>
+    <string name="smb_service_settings">服务设置</string>
+    <string name="smb_enable_smb">启用 SMB 服务</string>
+    <string name="smb_workgroup">工作组</string>
+    <string name="smb_server_description">服务器描述</string>
+    <string name="smb_protocol_settings">协议设置</string>
+    <string name="smb_max_protocol">最高协议版本</string>
+    <string name="smb_min_protocol">最低协议版本</string>
+    <string name="smb_transport_encryption">传输加密</string>
+    <string name="smb_advanced_settings">高级设置</string>
+    <string name="smb_smb2_lease">SMB2 Lease</string>
+    <string name="smb_smb3_multichannel">SMB3 多通道</string>
+    <string name="smb_connection_info">连接信息</string>
+    <string name="smb_max_connections">最大连接数</string>
+    <string name="smb_current_connections">当前连接数</string>
+    <string name="smb_shares">共享列表</string>
+    <string name="smb_no_shares">暂无共享</string>
+    <string name="smb_browseable">可浏览</string>
+    <string name="smb_writable">可写入</string>
+    <string name="smb_read_only">只读</string>
+    <string name="smb_service">SMB 服务</string>
+    <string name="smb_running">运行中</string>
+    <string name="smb_stopped">已停止</string>
+    <string name="smb_basic_settings">基本设置</string>
+    <string name="smb_description">描述</string>
+    <string name="smb_smb2_lease_desc">提高文件访问性能</string>
+    <string name="smb_smb3_multichannel_desc">提高网络传输性能</string>
+    <string name="smb_encrypt_transfer">加密传输</string>
+    <string name="smb_encrypt_transfer_desc">增强数据传输安全性</string>
+    <string name="smb_shared_folders">共享文件夹</string>
+
+    <!-- File Service -->
+    <string name="file_service_title">文件服务</string>
+    <string name="file_service_total_count">共 %1$d 个服务</string>
+    <string name="file_service_no_services">暂无文件服务</string>
+    <string name="file_service_port">端口: %1$d</string>
+    <string name="file_service_connections">%1$d 个连接</string>
+    <string name="file_service_desc">启用文件服务后，用户可以通过相应的协议访问NAS上的文件。</string>
+    
+    <!-- SMB Settings (新增配置项) -->
+    <string name="smb_enable">启用 SMB 服务</string>
+    <string name="smb_disable_shadow_copy">不可访问以前版本</string>
+    <string name="smb_transfer_log">启动传输日志</string>
+    
+    <!-- AFP Settings -->
+    <string name="afp_enable">启用 AFP 服务</string>
+    <string name="afp_transfer_log">启动传输日志</string>
+    
+    <!-- NFS Settings -->
+    <string name="nfs_enable">启用 NFS 服务</string>
+    <string name="nfs_v4_enable">启用 NFSv4.1 支持</string>
+    <string name="nfs_v4_domain">NFSv4 域</string>
+    
+    <!-- FTP Settings (新增配置项) -->
+    <string name="ftp_enable">启用 FTP 服务</string>
+    <string name="ftps_enable">启用 FTP SSL/TLS 加密服务（FTPS）</string>
+    <string name="ftp_timeout">超时 (1-7200秒)</string>
+    <string name="ftp_fxp">启用 FXP</string>
+    <string name="ftp_fips">启用 FIPS 加密模块</string>
+    <string name="ftp_ascii">支持 ASCII 传送模式</string>
+    
+    <!-- SFTP Settings -->
+    <string name="sftp_enable">启用 SFTP 服务</string>
+    <string name="sftp_port">SFTP 端口</string>
+    
+    <!-- UTF-8 Mode -->
+    <string name="utf8_disabled">禁用</string>
+    <string name="utf8_auto">自动</string>
+    <string name="utf8_forced">强制</string>
+
+    <!-- Groups -->
+    <string name="groups_title">用户群组</string>
+    <string name="groups_total_count">共 %1$d 个群组</string>
+    <string name="groups_no_groups">暂无群组</string>
+    <string name="groups_built_in">系统群组</string>
+    <string name="groups_members_count">%1$d 位成员</string>
+    <string name="groups_add_group">添加群组</string>
+    <string name="groups_group_name">群组名称</string>
+    <string name="groups_confirm_delete">确认删除</string>
+    <string name="groups_confirm_delete_message">确定要删除群组 \"%1$s\" 吗？</string>
+
+    <!-- Storage -->
+    <string name="storage_title">存储管理</string>
+    <string name="storage_volumes">存储空间</string>
+    <string name="storage_no_volumes">暂无存储空间</string>
+    <string name="storage_used">已用</string>
+    <string name="storage_available">可用</string>
+    <string name="storage_total">总计</string>
+    <string name="storage_file_system">文件系统</string>
+    <string name="storage_raid_type">RAID 类型</string>
+    <string name="storage_disks">磁盘</string>
+    <string name="storage_no_disks">暂无磁盘信息</string>
+    <string name="storage_serial">序列号</string>
+    <string name="storage_temperature">温度</string>
+    <string name="storage_temperature_format">%1$d°C</string>
+    <string name="storage_capacity">容量</string>
+
+    <!-- Network -->
+    <string name="network_title">网络</string>
+    <string name="network_general_info">基本信息</string>
+    <string name="network_hostname">主机名</string>
+    <string name="network_gateway">网关</string>
+    <string name="network_dns">DNS</string>
+    <string name="network_interfaces">网络接口</string>
+    <string name="network_no_interfaces">暂无网络接口</string>
+    <string name="network_connected">已连接</string>
+    <string name="network_disconnected">未连接</string>
+    <string name="network_ip_address">IP 地址</string>
+    <string name="network_subnet_mask">子网掩码</string>
+    <string name="network_mac_address">MAC 地址</string>
+    <string name="network_speed">速度</string>
+
+    <!-- External Devices -->
+    <string name="external_title">外部设备</string>
+    <string name="external_no_devices">暂无外部设备</string>
+    <string name="external_device_info">设备信息</string>
+    <string name="external_vendor">厂商</string>
+    <string name="external_model">型号</string>
+    <string name="external_capacity">容量</string>
+    <string name="external_mount_point">挂载点</string>
+    <string name="external_eject">弹出</string>
+    <string name="external_confirm_eject">确认弹出</string>
+    <string name="external_confirm_eject_message">确定要弹出设备 \"%1$s\" 吗？请确保没有正在使用该设备的任务。</string>
+
+    <!-- Docker - ImageList -->
+    <string name="docker_delete_image">删除镜像</string>
+    <string name="docker_delete_image_confirm">确定要删除镜像 \"%1$s\" 吗？\n此操作不可撤销。</string>
+    <string name="docker_no_images">没有镜像</string>
+    <string name="docker_no_images_desc">当前没有 Docker 镜像</string>
+    <string name="docker_image_id">ID: %1$s</string>
+    <string name="docker_dsm_image">DSM 镜像</string>
+    <string name="docker_created_time">创建时间: %1$s</string>
+    <string name="docker_image_count">共 %1$d 个镜像</string>
+    <string name="docker_image_total_size">总大小: %1$s</string>
+    <string name="docker_dsm_chip">DSM</string>
+
+    <!-- Docker - NetworkList -->
+    <string name="docker_no_networks">没有网络</string>
+    <string name="docker_no_networks_desc">当前没有 Docker 网络</string>
+    <string name="docker_create_network">创建网络</string>
+    <string name="docker_network_name">网络名称</string>
+    <string name="docker_network_driver">驱动</string>
+    <string name="docker_network_scope">范围</string>
+    <string name="docker_network_subnet">子网</string>
+    <string name="docker_network_gateway">网关</string>
+    <string name="docker_network_ipv6">IPv6</string>
+    <string name="docker_network_internal">内部网络</string>
+    <string name="docker_network_attachable">可附加</string>
+    <string name="docker_network_containers">容器</string>
+    <string name="docker_network_containers_count">%1$d 个容器</string>
+    <string name="docker_network_no_containers">无容器</string>
+    <string name="docker_network_enabled">已启用</string>
+    <string name="docker_network_disabled">未启用</string>
+    <string name="docker_network_yes">是</string>
+    <string name="docker_network_no">否</string>
+    <string name="docker_network_name_label">网络名称</string>
+    <string name="docker_network_driver_label">驱动类型</string>
+    <string name="docker_network_subnet_label">子网 (可选)</string>
+    <string name="docker_network_subnet_placeholder">例如: 172.20.0.0/16</string>
+    <string name="docker_network_gateway_label">网关 (可选)</string>
+    <string name="docker_network_gateway_placeholder">例如: 172.20.0.1</string>
+    <string name="docker_network_count">共 %1$d 个网络</string>
+    <string name="docker_network_connected_containers">%1$d 个容器已连接</string>
+    <string name="docker_network_connected_containers_label">连接的容器 (%1$d)</string>
+    <string name="docker_network_delete_title">删除网络</string>
+    <string name="docker_network_delete_confirm">确定要删除网络 \"%1$s\" 吗？</string>
+    <string name="docker_network_title">Docker网络</string>
+    <string name="docker_network_name_required">网络名称 *</string>
+
+    <!-- Photos -->
+    <string name="photos_title">照片</string>
+    <string name="photos_albums">相册</string>
+    <string name="photos_all_photos">所有照片</string>
+    <string name="photos_no_photos">暂无照片</string>
+    <string name="photos_no_photos_desc">还没有照片，快去拍摄吧</string>
+    <string name="photos_no_albums">暂无相册</string>
+    <string name="photos_no_albums_desc">还没有相册</string>
+    <string name="photos_album_count">%1$d 张照片</string>
+
+    <!-- PhotoPreview -->
+    <string name="photos_preview">照片预览</string>
+    <string name="photos_photo_info">照片信息</string>
+    <string name="photos_filename">文件名</string>
+    <string name="photos_size">大小</string>
+    <string name="photos_resolution">分辨率</string>
+    <string name="photos_resolution_format">%1$d × %2$d</string>
+    <string name="photos_taken_time">拍摄时间</string>
+    <string name="photos_camera">相机</string>
+    <string name="photos_aperture">光圈</string>
+    <string name="photos_aperture_format">f/%1$s</string>
+    <string name="photos_shutter_speed">快门速度</string>
+    <string name="photos_iso">ISO</string>
+    <string name="photos_focal_length">焦距</string>
+    <string name="photos_focal_length_format">%1$smm</string>
+    <string name="photos_location">位置</string>
+    <string name="photos_close">关闭</string>
+    <string name="photos_download">下载</string>
+    <string name="photos_link_copied">链接已复制</string>
+    <string name="photos_copy_link">复制链接</string>
+    <string name="photos_load_failed">加载失败</string>
+    <string name="photos_no_photos_simple">没有照片</string>
+    <string name="photos_no_albums_simple">没有相册</string>
+    <string name="photos_video_count">%1$d 个视频</string>
+    <string name="photos_album_empty">相册为空</string>
+    <string name="photos_delete_album_title">删除相册</string>
+    <string name="photos_delete_album_confirm">确定要删除相册 \"%1$s\" 吗？\n相册内的照片不会被删除。</string>
+    <string name="photos_delete_album">删除相册</string>
+    <string name="photos_cannot_load">无法加载照片</string>
+    <string name="photos_detail_title">照片详情</string>
+    <string name="photos_filesize">文件大小</string>
+    <string name="photos_type">类型</string>
+    <string name="photos_type_video">视频</string>
+    <string name="photos_type_photo">照片</string>
+    <string name="photos_duration">时长</string>
+    <string name="photos_duration_format">%1$d分%2$d秒</string>
+    <string name="photos_play">播放</string>
+    <string name="photos_share">分享</string>
+    <string name="photos_loading">正在加载...</string>
+    <string name="photos_video">视频</string>
+    <string name="photos_shared">共享</string>
+
+    <!-- Backup -->
+    <string name="backup_title">备份管理</string>
+    <string name="backup_photo_backup">照片备份</string>
+    <string name="backup_select_photos">选择照片</string>
+    <string name="backup_start_upload">开始上传</string>
+    <string name="backup_uploading">正在上传: %1$s</string>
+    <string name="backup_upload_progress">上传进度: %1$d%%</string>
+    <string name="backup_target_folder">目标文件夹: %1$s</string>
+    <string name="backup_selected_files">已选择 %1$d 个文件</string>
+    <string name="backup_task_management">任务管理</string>
+    <string name="backup_no_tasks">暂无备份任务</string>
+    <string name="backup_no_tasks_desc">点击上方按钮创建备份任务</string>
+    <string name="backup_source">源: %1$s</string>
+    <string name="backup_target">目标: %1$s</string>
+    <string name="backup_progress_format">%1$d/%2$d 文件</string>
+    <string name="backup_last_run">上次运行: %1$s</string>
+    <string name="backup_status_idle">空闲</string>
+    <string name="backup_status_running">备份中</string>
+    <string name="backup_status_completed">已完成</string>
+    <string name="backup_status_failed">失败</string>
+    <string name="backup_status_paused">已暂停</string>
+    <string name="backup_pause">暂停</string>
+    <string name="backup_resume">继续</string>
+    <string name="backup_quick_backup">快速备份</string>
+    <string name="backup_target_label">备份目标</string>
+    <string name="backup_select_folder">选择</string>
+    <string name="backup_select_files">选择文件</string>
+    <string name="backup_start">开始备份</string>
+    <string name="backup_clear">清除</string>
+    <string name="backup_last_backup">上次备份: %1$s</string>
+    <string name="backup_tasks">备份任务</string>
+    <string name="backup_select_files_error">请选择要备份的文件</string>
+    <string name="backup_file_progress">文件 %1$d / %2$d</string>
+
+    <!-- LogCenter -->
+    <string name="log_title">日志中心</string>
+    <string name="log_recent">最近日志</string>
+    <string name="log_recent_tab">最近</string>
+    <string name="log_logs_tab">日志</string>
+    <string name="log_history_tab">历史</string>
+    <string name="log_statistics_tab">统计</string>
+    <string name="log_type_system">常规</string>
+    <string name="log_type_connection">连接</string>
+    <string name="log_type_file_transfer">文件传输</string>
+    <string name="log_type_disk">硬盘</string>
+    <string name="log_level_all">全部</string>
+    <string name="log_level_error">错误</string>
+    <string name="log_level_warning">警告</string>
+    <string name="log_level_info">信息</string>
+    <string name="log_no_logs">暂无日志</string>
+    <string name="log_no_logs_desc">当前没有日志记录</string>
+    <string name="log_no_matching_logs">没有找到匹配的日志</string>
+    <string name="log_error_count">错误: %1$d</string>
+    <string name="log_warn_count">警告: %1$d</string>
+    <string name="log_info_count">信息: %1$d</string>
+    <string name="log_search_placeholder">搜索日志…</string>
+    <string name="log_history">历史日志</string>
+    <string name="log_no_history">暂无历史日志</string>
+    <string name="log_statistics">日志统计</string>
+    <string name="log_statistics_description">• 错误: 系统错误、严重问题\n• 警告: 需要注意的问题\n• 信息: 常规操作记录</string>
+
+    <!-- Packages -->
+    <string name="packages_title">套件中心</string>
+    <string name="packages_installed">已安装</string>
+    <string name="packages_all">全部套件</string>
+    <string name="packages_community">社群</string>
+    <string name="packages_install">安装</string>
+    <string name="packages_no_packages">暂无套件</string>
+    <string name="packages_no_packages_desc">没有已安装的套件</string>
+    <string name="packages_filter_all">全部</string>
+    <string name="packages_filter_running">运行中</string>
+    <string name="packages_filter_stopped">已停止</string>
+    <string name="packages_open_web">在浏览器中打开</string>
+    <string name="packages_uninstall">卸载</string>
+    <string name="packages_filter_all_count">全部 (%1$d)</string>
+    <string name="packages_uninstall_title">卸载套件</string>
+    <string name="packages_uninstall_confirm">确定要卸载 \"%1$s\" 吗？</string>
+    <string name="packages_remove_data">同时删除套件数据</string>
+    <string name="packages_remove_data_warning">警告：套件数据将被永久删除！</string>
+    <string name="packages_open">打开</string>
+    <string name="packages_more">更多</string>
+    <string name="packages_starting">正在启动…</string>
+    <string name="packages_start_success">启动成功</string>
+    <string name="packages_start_failed">启动失败: %1$s</string>
+    <string name="packages_stopping">正在停止…</string>
+    <string name="packages_stop_success">停止成功</string>
+    <string name="packages_stop_failed">停止失败: %1$s</string>
+    <string name="packages_uninstalling">正在卸载…</string>
+    <string name="packages_uninstall_success">卸载成功</string>
+    <string name="packages_uninstall_failed">卸载失败</string>
+
+    <!-- Smart Test (smart module) -->
+    <string name="smart_title">S.M.A.R.T. 检测</string>
+    <string name="smart_disk_health">磁盘健康</string>
+    <string name="smart_no_disks">暂无磁盘信息</string>
+    <string name="smart_no_disks_desc">无法获取磁盘 SMART 信息</string>
+    <string name="smart_health_normal">正常</string>
+    <string name="smart_health_warning">警告</string>
+    <string name="smart_health_abnormal">异常</string>
+    <string name="smart_temperature_format">%1$d°C</string>
+    <string name="smart_power_on_hours">通电时间</string>
+    <string name="smart_power_on_days">%1$d天</string>
+    <string name="smart_capacity">容量</string>
+    <string name="smart_quick_test">快速检测</string>
+    <string name="smart_extended_test">扩展检测</string>
+    <string name="smart_testing">检测中…</string>
+    <string name="smart_test_logs">检测日志</string>
+    <string name="smart_no_test_logs">暂无检测日志</string>
+    <string name="smart_test_type">测试类型: %1$s</string>
+    <string name="smart_test_time">时间: %1$s</string>
+    <string name="smart_disk_smart_status">磁盘 SMART 状态</string>
+    <string name="smart_test_history">SMART 测试历史</string>
+    <string name="smart_start_test">开始 SMART 测试</string>
+    <string name="smart_test_finished">完成</string>
+    <string name="smart_temperature">温度</string>
+
+    <!-- Smart Test (storage module) -->
+    <string name="smart_storage_title">S.M.A.R.T. 检测</string>
+    <string name="smart_storage_no_disks">没有磁盘</string>
+    <string name="smart_storage_no_disks_desc">未检测到磁盘信息</string>
+    <string name="smart_storage_health">健康状态</string>
+    <string name="smart_storage_health_normal">正常</string>
+    <string name="smart_storage_health_warning">警告</string>
+    <string name="smart_storage_health_abnormal">异常</string>
+    <string name="smart_storage_model">型号</string>
+    <string name="smart_storage_serial">序列号</string>
+    <string name="smart_storage_temperature">温度</string>
+    <string name="smart_storage_temperature_format">%1$d°C</string>
+    <string name="smart_storage_size">容量</string>
+    <string name="smart_storage_status">状态</string>
+    <string name="player_unknown_track">未知曲目</string>
+    <string name="player_playback_speed">播放速度</string>
+    <string name="player_set_default_speed">设为默认</string>
+    <string name="player_reset">重置</string>
+    <string name="player_add_preset">添加预设</string>
+    <string name="player_more_options">更多选项</string>
+    <string name="player_stats_page">统计页面</string>
+    <string name="player_stats_off">关闭</string>
+    <string name="player_stats_page_n">页面 %1$d</string>
+    <string name="smart_storage_quick_test">快速检测</string>
+    <string name="smart_storage_extended_test">扩展检测</string>
+    <string name="smart_storage_testing">检测中 %1$d%%</string>
+    <string name="smart_storage_last_test">上次检测</string>
+    <string name="smart_storage_test_logs">检测日志</string>
+    <string name="smart_storage_no_logs">暂无检测日志</string>
+    <string name="smart_storage_no_logs_desc">还没有进行过 SMART 检测</string>
+    <string name="smart_storage_test_completed">完成</string>
+    <string name="smart_storage_test_running">进行中</string>
+    <string name="smart_storage_test_aborted">中止</string>
+    <string name="smart_storage_confirm_test">确认检测</string>
+    <string name="smart_storage_confirm_quick_test">确定要对磁盘 %1$s 执行快速 SMART 检测吗？</string>
+    <string name="smart_storage_confirm_extended_test">确定要对磁盘 %1$s 执行扩展 SMART 检测吗？扩展检测可能需要较长时间。</string>
+    <string name="smart_storage_test_error">错误</string>
+    <string name="smart_storage_loading_disks">加载磁盘信息...</string>
+    <string name="smart_storage_load_failed">加载失败</string>
+    <string name="smart_storage_no_disks_detected">未检测到磁盘</string>
+    <string name="smart_storage_run_test">运行测试</string>
+    <string name="smart_storage_select_test_type">选择测试类型</string>
+    <string name="smart_storage_disk_label">磁盘: %1$s</string>
+    <string name="smart_storage_short_test">短测试</string>
+    <string name="smart_storage_short_test_desc">快速检测磁盘问题（约2分钟）</string>
+    <string name="smart_storage_long_test">长测试</string>
+    <string name="smart_storage_long_test_desc">完整磁盘检测（可能需要数小时）</string>
+    <string name="smart_storage_conveyance_test">传输测试</string>
+    <string name="smart_storage_conveyance_test_desc">测试磁盘传输性能</string>
+    <string name="smart_storage_test_in_progress">测试进行中 %1$d%%</string>
+
+    <!-- Search -->
+    <string name="search_title">搜索</string>
+    <string name="search_placeholder">搜索文件、照片…</string>
+    <string name="search_scope_all">全部</string>
+    <string name="search_scope_files">文件</string>
+    <string name="search_scope_photos">照片</string>
+    <string name="search_no_results">没有搜索结果</string>
+    <string name="search_no_results_desc">尝试使用不同的关键词搜索</string>
+    <string name="search_result_count">找到 %1$d 个结果</string>
+    <string name="search_searching">搜索中...</string>
+    <string name="search_failed">搜索失败</string>
+    <string name="search_hint">输入关键字开始搜索</string>
+    <string name="search_no_match">未找到匹配的结果</string>
+
+    <!-- Player -->
+    <string name="player_audio_title">音频播放</string>
+    <string name="player_previous">上一个</string>
+    <string name="player_next">下一个</string>
+    <string name="resource_monitor_pause">暂停</string>
+    <string name="resource_monitor_refresh">刷新</string>
+    <string name="resource_monitor_refresh_interval">刷新间隔:</string>
+    <string name="resource_monitor_network_traffic">网络流量</string>
+    <string name="resource_monitor_download">下载</string>
+    <string name="resource_monitor_upload">上传</string>
+    <string name="resource_monitor_combined_view">综合视图</string>
+    <string name="resource_monitor_performance_history">历史性能</string>
+    <string name="resource_monitor_search_no_result">未找到匹配的进程</string>
+    <string name="resource_monitor_no_process_info">暂无进程信息</string>
+    <string name="resource_monitor_auto_refreshing">自动刷新中</string>
+    <string name="resource_monitor_search_process_name">搜索进程名称...</string>
+    <string name="resource_monitor_clear">清除</string>
+    <string name="resource_monitor_stop_auto_refresh">停止自动刷新</string>
+    <string name="resource_monitor_start_auto_refresh">开启自动刷新</string>
+    <string name="resource_monitor_state_running">运行中</string>
+    <string name="resource_monitor_state_sleeping">睡眠</string>
+    <string name="resource_monitor_state_waiting">等待</string>
+    <string name="resource_monitor_state_zombie">僵尸</string>
+    <string name="resource_monitor_state_stopped">停止</string>
+    <string name="player_play">播放</string>
+    <string name="player_pause">暂停</string>
+    <string name="player_track_count">共 %1$d 首曲目</string>
+    <string name="player_track_index">%1$d / %2$d</string>
+
+    <!-- PlayerControls -->
+    <string name="player_back">返回</string>
+    <string name="player_lock">锁定</string>
+    <string name="player_unlock">解锁</string>
+    <string name="player_more">更多</string>
+    <string name="player_speed">倍速</string>
+    <string name="player_playlist">播放列表</string>
+    <string name="player_previous_media">上一个</string>
+    <string name="player_next_media">下一个</string>
+
+    <!-- Resource Monitor - Performance -->
+    <string name="resource_monitor_title">性能监控</string>
+    <string name="resource_monitor_cpu">CPU</string>
+    <string name="resource_monitor_memory">内存</string>
+    <string name="resource_monitor_network">网络</string>
+    <string name="resource_monitor_disk">磁盘</string>
+    <string name="resource_monitor_cpu_usage">CPU 使用率</string>
+    <string name="resource_monitor_memory_usage">内存使用率</string>
+    <string name="resource_monitor_network_receive">网络接收</string>
+    <string name="resource_monitor_network_send">网络发送</string>
+    <string name="resource_monitor_disk_read">磁盘读取</string>
+    <string name="resource_monitor_disk_write">磁盘写入</string>
+    <string name="resource_monitor_history">历史记录</string>
+    <string name="resource_monitor_process">进程管理</string>
+    <string name="resource_monitor_auto_refresh">自动刷新</string>
+
+    <!-- Resource Monitor - PerformanceHistory -->
+    <string name="resource_monitor_history_title">性能历史</string>
+    <string name="resource_monitor_time_1h">1小时</string>
+    <string name="resource_monitor_time_6h">6小时</string>
+    <string name="resource_monitor_time_1d">1天</string>
+    <string name="resource_monitor_time_1w">1周</string>
+    <string name="resource_monitor_time_1m">1月</string>
+    <string name="resource_monitor_current">当前</string>
+    <string name="resource_monitor_max">最大</string>
+    <string name="resource_monitor_avg">平均</string>
+    <string name="resource_monitor_cpu_usage_label">CPU使用率</string>
+    <string name="resource_monitor_memory_usage_label">内存使用率</string>
+    <string name="resource_monitor_network_receive_label">网络接收</string>
+    <string name="resource_monitor_network_send_label">网络发送</string>
+
+    <!-- Resource Monitor - ProcessManager -->
+    <string name="resource_monitor_process_title">进程管理</string>
+    <string name="resource_monitor_no_processes">暂无进程</string>
+    <string name="resource_monitor_no_processes_desc">没有找到进程信息</string>
+    <string name="resource_monitor_search_process">搜索进程…</string>
+    <string name="resource_monitor_sort_cpu">CPU</string>
+    <string name="resource_monitor_sort_memory">内存</string>
+    <string name="resource_monitor_sort_name">名称</string>
+    <string name="resource_monitor_sort_pid">PID</string>
+    <string name="resource_monitor_process_count">共 %1$d 个进程</string>
+
+    <!-- Virtual Machine -->
+    <string name="vm_title">虚拟机</string>
+    <string name="vm_no_vms">没有虚拟机</string>
+    <string name="vm_no_vms_desc">当前没有虚拟机</string>
+    <string name="vm_status_running">运行中</string>
+    <string name="vm_status_stopped">已停止</string>
+    <string name="vm_status_suspended">已挂起</string>
+    <string name="vm_vcpu">vCPU: %1$d</string>
+    <string name="vm_auto_start">自动启动</string>
+    <string name="vm_starting">正在启动...</string>
+    <string name="vm_stopping">正在停止...</string>
+    <string name="vm_restarting">正在重启...</string>
+    <string name="vm_operating">操作中...</string>
+    <string name="vm_management">虚拟机管理</string>
+    <string name="vm_loading">加载虚拟机列表...</string>
+    <string name="vm_total_count">共 %1$d 个虚拟机</string>
+    <string name="vm_running_count">%1$d 运行中</string>
+    <string name="vm_stopped_count">%1$d 已停止</string>
+    <string name="vm_force_stop_title">强制停止虚拟机</string>
+    <string name="vm_force_stop_confirm">确定要强制停止虚拟机 \"%1$s\" 吗？\n强制停止可能导致数据丢失。</string>
+    <string name="vm_force_stop">强制停止</string>
+    <string name="vm_shutdown">关机</string>
+    <string name="vm_cpu_label">CPU</string>
+    <string name="vm_cpu_cores">%1$d 核</string>
+    <string name="vm_memory_label">内存</string>
+    <string name="vm_disk_label">磁盘</string>
+    <string name="vm_network_label">网络</string>
+
+    <!-- Main -->
+    <string name="main_feedback">反馈页面 - 待实现</string>
+    <string name="main_not_found">未找到</string>
+    <string name="main_page_not_found">页面 \'%1$s\' 未找到</string>
+
+    <!-- Components - TextEditor -->
+    <string name="components_text_editor">文本编辑器</string>
+    <string name="components_edit">编辑</string>
+    <string name="components_read_only">只读模式</string>
+    <string name="components_edit_mode">编辑模式</string>
+    <string name="components_unsaved_changes">有未保存的更改</string>
+    <string name="components_discard">放弃</string>
+    <string name="components_line_count">%1$d 行</string>
+
+    <!-- Components - PdfViewer -->
+    <string name="components_pdf_viewer">PDF 查看器</string>
+    <string name="components_page_format">%1$d / %2$d</string>
+
+    <!-- Components - CommonComponents -->
+    <string name="components_no_data">暂无数据</string>
+    <string name="components_empty_desc">这里什么都没有</string>
+    <string name="components_load_failed">加载失败</string>
+    <string name="components_loading">加载中…</string>
+    <string name="components_unknown_error">未知错误</string>
+    <string name="components_file_label">文件: %1$s</string>
+    <string name="components_size_label">大小: %1$d 字符</string>
+    <string name="components_lines_label">行数: %1$d</string>
+    <string name="components_input_hint">在此输入文本...</string>
+    <string name="components_close">关闭</string>
+    <string name="components_save_image">保存</string>
+    <string name="components_share">分享</string>
+    <string name="components_pinch_zoom">双指缩放</string>
+    <string name="components_image_desc">图片 %1$d</string>
+    <string name="components_unsaved">未保存的更改</string>
+    <string name="components_read_only_desc">只读</string>
+    <string name="components_edit_desc">编辑</string>
+
+    <!-- Security - GesturePassword -->
+    <string name="security_gesture_password">手势密码</string>
+    <string name="security_draw_pattern">绘制解锁图案</string>
+    <string name="security_draw_new_pattern">绘制新图案（至少4个点）</string>
+    <string name="security_confirm_pattern">再次绘制以确认</string>
+    <string name="security_pattern_too_short">至少需要连接4个点</string>
+    <string name="security_pattern_mismatch">两次图案不一致，请重试</string>
+    <string name="security_pattern_set_success">手势密码设置成功</string>
+    <string name="security_pattern_correct">验证成功</string>
+    <string name="security_pattern_wrong">图案错误，请重试</string>
+    <string name="security_set_gesture_password">设置手势密码</string>
+    <string name="security_pattern_hint">连接至少4个点来创建手势密码</string>
+
+    <!-- TaskManager -->
+    <string name="task_manager_title">任务管理器</string>
+    <string name="task_manager_processes">进程</string>
+    <string name="task_manager_services">服务</string>
+    <string name="task_manager_no_processes">暂无进程信息</string>
+    <string name="task_manager_no_services">暂无服务信息</string>
+    <string name="task_manager_process_count">进程数: %1$d</string>
+    <string name="task_manager_cpu">CPU</string>
+    <string name="task_manager_memory">内存</string>
+    <string name="task_manager_pid">PID</string>
+    <string name="task_manager_user">用户</string>
+
+    <!-- OTP Bind -->
+    <string name="otp_title">两步验证</string>
+    <string name="otp_enabled">已启用两步验证</string>
+    <string name="otp_enabled_desc">您的账户已启用两步验证保护</string>
+    <string name="otp_disable">禁用两步验证</string>
+    <string name="otp_setup">设置两步验证</string>
+    <string name="otp_setup_desc">使用验证器应用（如 Google Authenticator）为您的账户添加额外的安全保护</string>
+    <string name="otp_step_email">步骤 1: 输入邮箱</string>
+    <string name="otp_step_email_desc">输入用于接收恢复代码的邮箱地址</string>
+    <string name="otp_email_label">邮箱地址</string>
+    <string name="otp_email_placeholder">请输入邮箱</string>
+    <string name="otp_step_qrcode">步骤 2: 扫描二维码</string>
+    <string name="otp_step_qrcode_desc">使用验证器应用扫描以下二维码</string>
+    <string name="otp_manual_input">或手动输入密钥:</string>
+    <string name="otp_copy_secret">复制密钥</string>
+    <string name="otp_secret_copied">密钥已复制</string>
+    <string name="otp_step_verify">步骤 3: 验证</string>
+    <string name="otp_step_verify_desc">输入验证器应用显示的6位验证码</string>
+    <string name="otp_code_label">验证码</string>
+    <string name="otp_code_placeholder">请输入6位验证码</string>
+    <string name="otp_verify">验证</string>
+    <string name="otp_verifying">验证中…</string>
+    <string name="otp_step_complete">设置完成</string>
+    <string name="otp_step_complete_desc">两步验证已成功启用！下次登录时需要输入验证码。</string>
+    <string name="otp_disable_title">禁用两步验证</string>
+    <string name="otp_disable_desc">请输入当前验证码以禁用两步验证</string>
+    <string name="otp_confirm_disable">确认禁用</string>
+    <string name="otp_loading_qrcode">正在获取二维码…</string>
+    <string name="otp_2fa_title">双因素认证</string>
+    <string name="otp_2fa_enabled">双因素认证已启用</string>
+    <string name="otp_2fa">双因素认证</string>
+    <string name="otp_2fa_enabled_desc">您的账户已启用双因素认证，登录时需要输入验证码</string>
+    <string name="otp_2fa_desc">启用双因素认证后，登录时需要输入手机验证码，提高账户安全性</string>
+    <string name="otp_disable_2fa">禁用双因素认证</string>
+    <string name="otp_enable_2fa">启用双因素认证</string>
+    <string name="otp_instructions_title">使用说明</string>
+    <string name="otp_instructions_content">1. 下载并安装验证器应用（如 Google Authenticator）n2. 扫描二维码或手动输入密钥n3. 输入验证器显示的6位数字验证码n4. 完成绑定后，登录时需要输入验证码</string>
+    <string name="otp_set_recovery_email">设置恢复邮箱</string>
+    <string name="otp_recovery_email_desc">请输入您的恢复邮箱地址，用于在无法使用验证器时恢复账户访问</string>
+    <string name="otp_recovery_email_label">恢复邮箱</string>
+    <string name="otp_continue">继续</string>
+    <string name="otp_scan_qrcode">扫描二维码</string>
+    <string name="otp_scan_qrcode_desc">使用验证器应用扫描下方二维码</string>
+    <string name="otp_qrcode">二维码</string>
+    <string name="otp_manual_input_secret">或手动输入密钥：</string>
+    <string name="otp_enter_6_digit">输入6位验证码</string>
+    <string name="otp_verify_and_enable">验证并启用</string>
+    <string name="otp_setup_success">设置成功！</string>
+    <string name="otp_setup_success_desc">双因素认证已成功启用，下次登录时请使用验证器应用生成的验证码</string>
+    <string name="otp_2fa_enabled_msg">双因素认证已启用</string>
+    <string name="otp_2fa_disabled_msg">双因素认证已禁用</string>
+    <string name="otp_enter_6_digit_error">请输入6位验证码</string>
+    <string name="otp_disable_2fa_title">禁用双因素认证</string>
+    <string name="otp_disable_2fa_desc">请输入当前验证码以禁用双因素认证</string>
+    <string name="otp_confirm_disable_btn">确认禁用</string>
+
+    <!-- Remote Folder -->
+    <string name="remote_folder_title">远程文件夹</string>
+    <string name="remote_folder_smb">SMB/CIFS</string>
+    <string name="remote_folder_nfs">NFS</string>
+    <string name="remote_folder_no_folders">暂无远程文件夹</string>
+    <string name="remote_folder_no_folders_desc">还没有挂载远程文件夹</string>
+    <string name="remote_folder_server">服务器</string>
+    <string name="remote_folder_path">路径</string>
+    <string name="remote_folder_mount_point">挂载点</string>
+    <string name="remote_folder_connected">已连接</string>
+    <string name="remote_folder_disconnected">未连接</string>
+    <string name="remote_folder_disconnect">断开连接</string>
+    <string name="remote_folder_reconnect">重新连接</string>
+    <string name="remote_folder_confirm_disconnect">确认断开</string>
+    <string name="remote_folder_confirm_disconnect_msg">确定要断开远程文件夹 \"%1$s\" 的连接吗？</string>
+    <string name="remote_folder_add">添加远程文件夹</string>
+    <string name="remote_folder_server_address">服务器地址</string>
+    <string name="remote_folder_shared_path">共享路径</string>
+    <string name="remote_folder_username">用户名</string>
+    <string name="remote_folder_password">密码</string>
+    <string name="remote_folder_server_placeholder">例如: 192.168.1.100 或 server.local</string>
+    <string name="remote_folder_path_placeholder">例如: /shared 或 sharename</string>
+    <string name="remote_folder_loading">加载远程文件夹...</string>
+    <string name="remote_folder_load_failed">加载失败</string>
+    <string name="remote_folder_no_smb">暂无SMB/CIFS远程文件夹</string>
+    <string name="remote_folder_no_nfs">暂无NFS远程文件夹</string>
+    <string name="remote_folder_unmount">卸载</string>
+    <string name="remote_folder_more">更多</string>
+    <string name="remote_folder_remote_path">远程路径</string>
+    <string name="remote_folder_server_required">请输入服务器地址</string>
+
+    <!-- SecurityScan -->
+    <string name="security_scan_title">安全扫描</string>
+    <string name="security_scan_score">安全评分</string>
+    <string name="security_scan_items_passed">%1$d/%2$d 项通过</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">通知中心</string>
+    <string name="notifications_clear_all">清除全部</string>
+    <string name="notifications_empty">没有通知</string>
+    <string name="notifications_mark_read">标记为已读</string>
+
+    <!-- Firewall extra -->
+    <string name="firewall_allow">允许</string>
+    <string name="firewall_deny">拒绝</string>
+    <string name="firewall_dst_port">目标端口</string>
+    <string name="firewall_src_ip">源IP</string>
+    <string name="firewall_help_title">说明</string>
+    <string name="firewall_help_desc">防火墙规则按顺序执行，匹配到的第一个规则将决定数据包的处理方式。</string>
+
+    <!-- ExternalDevices extra -->
+    <string name="external_connect_hint">请连接 USB 设备或 eSATA 设备</string>
+    <string name="external_usb_devices">USB 设备</string>
+    <string name="external_esata_devices">eSATA 设备</string>
+    <string name="external_eject_title">弹出设备</string>
+    <string name="external_eject_confirm">确定要弹出 \"%1$s\" 吗？弹出后设备将无法访问。</string>
+    <string name="external_status_mounted">已挂载</string>
+    <string name="external_status_ready">就绪</string>
+    <string name="external_status_error">错误</string>
+    <string name="external_status_unmounted">未挂载</string>
+
+    <!-- SharedFolders extra -->
+    <string name="shared_folders_empty">没有共享文件夹</string>
+    <string name="shared_folders_snapshot">快照</string>
+    <string name="shared_folders_delete_title">删除共享文件夹</string>
+    <string name="shared_folders_delete_confirm">确定要删除共享文件夹 \"%1$s\" 吗？</string>
+    <string name="shared_folders_delete_warning">警告：此操作将删除文件夹中的所有数据，且无法恢复！</string>
+    <string name="shared_folders_clean_recycle_bin">清空回收站</string>
+    <string name="shared_folders_clean_recycle_confirm">确定要清空共享文件夹 \"%1$s\" 的回收站吗？此操作无法撤销。</string>
+    <string name="shared_folders_clean">清空</string>
+    <string name="shared_folders_delete_folder">删除共享文件夹</string>
+    <string name="shared_folders_desc">描述</string>
+    <string name="shared_folders_none">无</string>
+    <string name="shared_folders_vol_path">卷路径</string>
+    <string name="shared_folders_detail">详情</string>
+
+    <!-- OTP extra -->
+    <string name="otp_enabled_title">双因素认证已启用</string>
+    <string name="otp_disabled_desc">启用双因素认证后，登录时需要输入手机验证码，提高账户安全性</string>
+    <string name="otp_enable">启用双因素认证</string>
+    <string name="otp_recovery_email_title">设置恢复邮箱</string>
+    <string name="otp_manual_key">或手动输入密钥：</string>
+    <string name="otp_enter_code">输入6位验证码</string>
+    <string name="otp_verification_code">验证码</string>
+
+    <!-- Network extra -->
+    <string name="network_config">网络配置</string>
+    <string name="network_not_set">未设置</string>
+
+    <!-- Groups extra -->
+    <string name="groups_empty">没有用户群组</string>
+    <string name="groups_system">系统</string>
+
+    <!-- Storage extra -->
+    <string name="storage_disk_id">磁盘 %1$s</string>
+    <string name="storage_unknown">未知</string>
+
+    <!-- SystemInfo -->
+    <string name="system_info_title">信息中心</string>
+    <string name="system_info_hardware">硬件信息</string>
+    <string name="system_info_model">型号</string>
+    <string name="system_info_serial">序列号</string>
+    <string name="system_info_hostname">主机名</string>
+    <string name="system_info_system">系统信息</string>
+    <string name="system_info_dsm_version">DSM 版本</string>
+    <string name="system_info_build">系统构建</string>
+    <string name="system_info_kernel">内核版本</string>
+    <string name="system_info_uptime">运行时间</string>
+    <string name="system_info_processor">处理器</string>
+    <string name="system_info_cpu_cores">核心数</string>
+    <string name="system_info_cpu_cores_value">%1$d 核心</string>
+    <string name="system_info_memory">内存</string>
+    <string name="system_info_total_memory">总内存</string>
+    <string name="system_info_hw_status">硬件状态</string>
+    <string name="system_info_temperature">温度</string>
+    <string name="system_info_fan_speed">风扇转速</string>
+    <string name="system_info_help_title">获取帮助</string>
+    <string name="system_info_help_desc">访问 Synology 官方网站获取更多帮助和技术支持。</string>
+
+    <!-- Certificate -->
+    <string name="certificate_title">证书</string>
+    <string name="certificate_empty">没有SSL证书</string>
+    <string name="certificate_default">默认</string>
+    <string name="certificate_expired">已过期</string>
+    <string name="certificate_name_fallback">证书</string>
+    <string name="certificate_subject">主题</string>
+    <string name="certificate_issuer">颁发者</string>
+    <string name="certificate_validity">有效期</string>
+    <string name="certificate_services">服务: %1$s</string>
+    <string name="certificate_set_default">设为默认</string>
+
+    <!-- Resource Monitor -->
+    <string name="resmon_title">资源监控</string>
+    <string name="resmon_pause">暂停</string>
+    <string name="resmon_auto_refresh">自动刷新</string>
+    <string name="resmon_cpu_usage">CPU 使用率</string>
+    <string name="resmon_memory_usage">内存使用率</string>
+    <string name="resmon_network_traffic">网络流量</string>
+    <string name="resmon_download">下载</string>
+    <string name="resmon_upload">上传</string>
+    <string name="resmon_refresh_interval">刷新间隔:</string>
+    <string name="resmon_history_title">历史性能</string>
+    <string name="resmon_combined_view">综合视图</string>
+    <string name="resmon_process_title">进程管理</string>
+    <string name="resmon_stop_auto_refresh">停止自动刷新</string>
+    <string name="resmon_start_auto_refresh">开启自动刷新</string>
+    <string name="resmon_search_process">搜索进程名称...</string>
+    <string name="resmon_sort_memory">内存</string>
+    <string name="resmon_sort_name">名称</string>
+    <string name="resmon_process_count">共 %1$d 个进程</string>
+    <string name="resmon_auto_refreshing">自动刷新中</string>
+    <string name="resmon_no_match_process">未找到匹配的进程</string>
+    <string name="resmon_no_process">暂无进程信息</string>
+    <string name="resmon_state_running">运行中</string>
+    <string name="resmon_state_sleeping">睡眠</string>
+    <string name="resmon_state_waiting">等待</string>
+    <string name="resmon_state_zombie">僵尸</string>
+    <string name="resmon_state_stopped">停止</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">DSM 通知</string>
+    <string name="notification_channel_description">DSM 应用程序通知</string>
+    <string name="notification_download_complete">下载完成</string>
+    <string name="notification_download_complete_message">%1$s 下载已完成</string>
+    <string name="notification_upload_complete">上传完成</string>
+    <string name="notification_upload_complete_message">%1$s 上传已完成</string>
+    <string name="notification_operation_failed">操作失败</string>
+    <string name="notification_operation_success">操作成功</string>
+    <string name="notification_permission_denied_warning">未授权通知权限，下载可能被系统中断。建议在设置中开启通知权限。</string>
+
+    <!-- FileDownload -->
+    <string name="file_download_description">正在下载 %1$s</string>
+
+    <!-- Biometric / MainActivity -->
+    <string name="biometric_title">身份验证</string>
+    <string name="biometric_subtitle_auto_login">验证成功后自动登录</string>
+    <string name="biometric_negative_button">使用密码</string>
+
+    <!-- Time -->
+    <string name="time_just_now">刚刚</string>
+    <string name="time_minutes_ago">%d分钟前</string>
+    <string name="time_hours_ago">%d小时前</string>
+    <string name="time_days_ago">%d天前</string>
+    <string name="time_months_ago">%d个月前</string>
+    <string name="time_years_ago">%d年前</string>
+    <string name="time_zero_seconds">0秒</string>
+    <string name="time_days">%d天</string>
+    <string name="time_hours">%d小时</string>
+    <string name="time_minutes">%d分钟</string>
+    <string name="time_seconds">%d秒</string>
+
+    <!-- Login Validation -->
+    <string name="login_error_host_required">请输入服务器地址</string>
+    <string name="login_error_account_required">请输入用户名</string>
+    <string name="login_error_password_required">请输入密码</string>
+    <string name="login_error_otp_required">请输入双因素验证码</string>
+    <string name="login_error_device_unauthorized">设备未授权，请勾选\"记住此设备\"后重试</string>
+    <string name="login_error_network">网络错误</string>
+    <string name="login_error_failed">登录失败</string>
+
+    <!-- Package Status -->
+    <string name="package_status_installing">安装中</string>
+    <string name="package_status_uninstalling">卸载中</string>
+    <string name="package_status_updating">更新中</string>
+
+    <!-- FileViewModel / FileDetailViewModel -->
+    <string name="file_creating_folder">创建文件夹…</string>
+    <string name="file_create_failed">创建失败</string>
+    <string name="file_renaming">重命名…</string>
+    <string name="file_rename_failed">重命名失败</string>
+    <string name="file_rename_success">重命名成功</string>
+    <string name="file_deleting">删除中…</string>
+    <string name="file_deleting_progress">删除中 %1$d%%</string>
+    <string name="file_delete_failed">删除失败</string>
+    <string name="file_delete_success">删除成功</string>
+    <string name="file_delete_failed_reason">删除失败: %1$s</string>
+    <string name="file_copying">复制中…</string>
+    <string name="file_copy_failed">复制失败</string>
+    <string name="file_moving">移动中…</string>
+    <string name="file_move_failed">移动失败</string>
+    <string name="file_processing_progress">处理中 %1$d%%</string>
+    <string name="file_operation_failed">操作失败</string>
+    <string name="file_operation_timeout">操作超时，请稍后重试</string>
+    <string name="file_compressing">压缩中…</string>
+    <string name="file_compressing_progress">压缩中 %1$d%%</string>
+    <string name="file_compress_failed">压缩失败</string>
+    <string name="file_extracting">解压中…</string>
+    <string name="file_extracting_progress">解压中 %1$d%%</string>
+    <string name="file_extract_failed">解压失败</string>
+    <string name="file_search_failed_vm">搜索失败</string>
+    <string name="file_add_failed">添加失败</string>
+    <string name="file_create_link_failed">创建链接失败</string>
+    <string name="file_favorite_removed">已取消收藏</string>
+    <string name="file_favorite_remove_failed">取消收藏失败</string>
+    <string name="file_favorite_added">已添加收藏</string>
+    <string name="file_favorite_add_failed">添加收藏失败</string>
+    <string name="file_create_share_failed">创建分享失败: %1$s</string>
+
+    <!-- Backup ViewModel -->
+    <string name="backup_phone_album">手机相册</string>
+    <string name="backup_document_backup">文档备份</string>
+
+    <!-- SharedFolders ViewModel -->
+    <string name="shared_folders_deleted">共享文件夹已删除</string>
+    <string name="shared_folders_delete_failed">删除失败</string>
+    <string name="shared_folders_recycle_bin_started">回收站清空任务已启动</string>
+    <string name="shared_folders_clean_failed">清空失败</string>
+
+    <!-- SecurityScan ViewModel -->
+    <string name="security_scan_category_other">其他</string>
+
+    <!-- FileApi -->
+    <string name="file_api_cannot_open_file">无法打开文件</string>
+
+    <!-- Resource Monitor - PerformanceHistory ViewModel -->
+    <string name="resource_monitor_disk_read_label">磁盘读取</string>
+    <string name="resource_monitor_disk_write_label">磁盘写入</string>
+    <string name="resource_monitor_time_24h">24小时</string>
+    <string name="resource_monitor_time_7d">7天</string>
+
+    <!-- API Client -->
+    <string name="api_error_upload_cancelled">上传已取消</string>
+    <string name="api_error_download_failed">下载失败: %s</string>
+    <string name="api_error_empty_response">响应体为空</string>
+    <string name="api_error_request_failed">请求失败: %s</string>
+    <string name="api_error_unknown">未知错误</string>
+    <string name="api_error_account_not_found">账号不存在</string>
+    <string name="api_error_account_disabled">账号已停用</string>
+    <string name="api_error_wrong_password">密码错误</string>
+    <string name="api_error_permission_denied">权限被拒绝</string>
+    <string name="api_error_service_unavailable">服务不可用</string>
+    <string name="api_error_session_timeout">会话超时</string>
+    <string name="api_error_session_interrupted">会话中断</string>
+    <string name="api_error_session_not_found">会话不存在</string>
+    <string name="api_error_session_relogin">会话已过期，正在重新登录…</string>
+    <string name="api_error_session_relogin_failed">会话已过期，自动登录失败，请重新登录</string>
+    <string name="api_error_login_wrong_credentials">账户或密码错误</string>
+    <string name="api_error_login_account_disabled">账户被停用</string>
+    <string name="api_error_login_permission_denied">权限被拒绝</string>
+    <string name="api_error_login_otp_required">需要 OTP 验证</string>
+    <string name="api_error_login_account_not_found">账户不存在</string>
+    <string name="api_error_login_otp_wrong">OTP 验证码错误</string>
+    <string name="api_error_login_2fa_required">需要双重验证</string>
+    <string name="api_error_login_otp_wrong_2">OTP 验证码错误</string>
+    <string name="api_error_login_device_unauthorized">设备未授权</string>
+    <string name="api_error_login_session_expired">会话已过期</string>
+    <string name="api_error_login_account_locked">账户已锁定</string>
+    <string name="api_error_login_account_expired">账户过期</string>
+    <string name="api_error_login_password_expired">密码过期</string>
+    <string name="api_error_login_account_inactive">账户未激活</string>
+    <string name="api_error_login_otp_not_enabled">OTP 功能未启用</string>
+    <string name="api_error_login_device_token_wrong">设备令牌错误</string>
+    <string name="api_error_login_device_auth_required">需要设备授权</string>
+    <string name="api_error_login_device_auth_failed">设备授权失败</string>
+    <string name="api_error_file_not_found">文件不存在</string>
+    <string name="api_error_folder_not_found">文件夹不存在</string>
+    <string name="api_error_file_exists">文件已存在</string>
+    <string name="api_error_folder_exists">文件夹已存在</string>
+    <string name="api_error_invalid_filename">文件名无效</string>
+    <string name="api_error_invalid_path">路径无效</string>
+    <string name="api_error_insufficient_permission">权限不足</string>
+    <string name="api_error_insufficient_storage">存储空间不足</string>
+    <string name="api_error_file_in_use">文件正在使用</string>
+    <string name="api_error_filesystem_error">文件系统错误</string>
+    <string name="api_error_task_not_found">任务不存在</string>
+    <string name="api_error_task_create_failed">任务创建失败</string>
+    <string name="api_error_invalid_download_link">无效的下载链接</string>
+    <string name="api_error_download_task_failed">下载失败</string>
+    <string name="api_error_unknown_code">操作失败 (错误码: %d)</string>
+
+    <!-- PackagesViewModel -->
+    <string name="package_starting">正在启动…</string>
+    <string name="package_start_success">启动成功</string>
+    <string name="package_start_failed">启动失败: %s</string>
+    <string name="package_stopping">正在停止…</string>
+    <string name="package_stop_success">停止成功</string>
+    <string name="package_stop_failed">停止失败: %s</string>
+    <string name="package_installing">正在安装…</string>
+    <string name="package_install_success">安装成功</string>
+    <string name="package_install_failed">安装失败</string>
+    <string name="package_uninstalling">正在卸载…</string>
+    <string name="package_uninstall_success">卸载成功</string>
+    <string name="package_uninstall_failed">卸载失败</string>
+
+    <!-- TerminalViewModel -->
+    <string name="terminal_connecting_to">正在连接到 %1$s:%2$d…</string>
+    <string name="terminal_connected_to">已连接到 %s</string>
+    <string name="terminal_connect_failed">连接失败: %s</string>
+    <string name="terminal_disconnecting">正在断开连接…</string>
+    <string name="terminal_disconnected">连接已断开</string>
+    <string name="terminal_keyword_disconnected">断开</string>
+    <string name="terminal_service_running">SSH终端服务运行中</string>
+    <string name="terminal_service_notification_desc">保持SSH连接在后台运行</string>
+    <string name="upload_keyword_cancelled">取消</string>
+
+    <!-- 国际化补充 -->
+    <string name="download_error_url_required">请输入下载链接</string>
+    <string name="download_create_failed_reason">创建失败: %s</string>
+    <string name="download_read_file_failed">读取文件失败: %s</string>
+    <string name="download_select_at_least_one">请至少选择一个文件</string>
+    <string name="remote_error_server_required">请输入服务器地址</string>
+    <string name="search_error_task_id_failed">获取任务ID失败</string>
+
+    <!-- 国际化补充 - Screen/Components -->
+    <string name="file_folder">文件夹</string>
+    <string name="file_upload_failed">上传失败</string>
+    <string name="file_upload_cancelled">已取消</string>
+    <string name="placeholder_system_info">系统信息页面 - 待实现</string>
+    <string name="placeholder_user_groups">用户群组页面 - 待实现</string>
+    <string name="placeholder_task_scheduler">任务计划页面 - 待实现</string>
+    <string name="placeholder_version">版本 1.0.0</string>
+    <string name="placeholder_feedback">反馈页面 - 待实现</string>
+    <string name="placeholder_page_not_found">页面 \'%1$s\' 未找到</string>
+    <string name="setting_version">版本 %1$s</string>
+    <string name="dashboard_uptime_days">%1$d天 </string>
+    <string name="dashboard_uptime_hours_minutes">%1$d时 %2$d分</string>
+
+    <!-- API 错误 -->
+    <string name="api_error_quickconnect_failed">QuickConnect 查询失败</string>
+
+    <!-- 性能历史时间范围 -->
+    <string name="perf_history_1_hour">1小时</string>
+    <string name="perf_history_6_hours">6小时</string>
+    <string name="perf_history_24_hours">24小时</string>
+    <string name="perf_history_7_days">7天</string>
+
+    <!-- SSH -->
+    <string name="ssh_auth_password_failed">认证失败：用户名或密码错误</string>
+    <string name="ssh_auth_key_failed">认证失败：密钥无效</string>
+    <string name="ssh_send_command_failed">发送命令失败: %s</string>
+    <string name="ssh_disconnected">连接已断开</string>
+
+    <!-- 关于页面 -->
+    <string name="about_title">关于</string>
+    <string name="about_app_name">DSM 移动客户端</string>
+    <string name="about_version">版本</string>
+    <string name="about_server_info">服务器信息</string>
+    <string name="about_server_address">服务器地址</string>
+    <string name="about_dsm_version">DSM 版本</string>
+    <string name="about_device_model">设备型号</string>
+    <string name="about_open_source">开源许可</string>
+    <string name="about_open_source_desc">本应用使用了以下开源库</string>
+    <string name="about_lib_compose">Jetpack Compose - 现代 Android UI 工具包</string>
+    <string name="about_lib_hilt">Hilt - 依赖注入框架</string>
+    <string name="about_lib_okhttp">OkHttp - HTTP 客户端</string>
+    <string name="about_lib_coil">Coil - 图片加载库</string>
+    <string name="about_lib_mpv">mpv-android - 视频播放引擎</string>
+    <string name="about_not_connected">未连接</string>
+
+    <!-- 反馈页面 -->
+    <string name="feedback_title">反馈</string>
+    <string name="feedback_type">反馈类型</string>
+    <string name="feedback_type_bug">问题报告</string>
+    <string name="feedback_type_feature">功能建议</string>
+    <string name="feedback_type_other">其他</string>
+    <string name="feedback_subject">标题</string>
+    <string name="feedback_subject_hint">请简要描述您的反馈</string>
+    <string name="feedback_content">详细描述</string>
+    <string name="feedback_content_hint">请详细描述您遇到的问题或建议</string>
+    <string name="feedback_device_info">设备信息</string>
+    <string name="feedback_auto_collect">自动收集设备和系统信息以帮助诊断问题</string>
+    <string name="feedback_submit">提交反馈</string>
+    <string name="feedback_submit_success">反馈已提交，感谢您的反馈！</string>
+    <string name="feedback_subject_required">请输入标题</string>
+    <string name="feedback_content_required">请输入详细描述</string>
+    <string name="feedback_send_email">发送邮件</string>
+
+    <!-- 系统更新 -->
+    <string name="update_title">系统更新</string>
+    <string name="update_current_version">当前版本</string>
+    <string name="update_dsm_version">DSM %1$s</string>
+    <string name="update_build">Build %1$s</string>
+    <string name="update_check">检查更新</string>
+    <string name="update_checking">正在检查更新…</string>
+    <string name="update_available">有新版本可用</string>
+    <string name="update_latest">已是最新版本</string>
+    <string name="update_new_version">新版本: DSM %1$s</string>
+    <string name="update_release_date">发布日期</string>
+    <string name="update_changelog">更新内容</string>
+    <string name="update_important">重要更新</string>
+    <string name="update_auto_update">自动更新</string>
+    <string name="update_auto_update_desc">有新版本时自动安装</string>
+    <string name="update_last_check">上次检查: %1$s</string>
+    <string name="update_never_checked">从未检查</string>
+    <string name="update_check_failed">检查更新失败</string>
+    <string name="update_model">设备型号</string>
+    <string name="update_serial">序列号</string>
+    <string name="update_desc">系统更新管理</string>
+
+    <!-- iSCSI -->
+    <string name="iscsi_title">iSCSI Manager</string>
+    <string name="iscsi_desc">iSCSI 存储管理</string>
+    <string name="iscsi_tab_lun">LUN</string>
+    <string name="iscsi_tab_target">Target</string>
+    <string name="iscsi_lun_name">名称</string>
+    <string name="iscsi_lun_location">位置</string>
+    <string name="iscsi_lun_size">容量</string>
+    <string name="iscsi_lun_used">已用</string>
+    <string name="iscsi_lun_status">状态</string>
+    <string name="iscsi_lun_status_normal">正常</string>
+    <string name="iscsi_lun_status_degraded">降级</string>
+    <string name="iscsi_lun_status_crashed">异常</string>
+    <string name="iscsi_lun_status_unknown">未知</string>
+    <string name="iscsi_lun_thin">精简配置</string>
+    <string name="iscsi_lun_thick">完整配置</string>
+    <string name="iscsi_target_name">名称</string>
+    <string name="iscsi_target_iqn">IQN</string>
+    <string name="iscsi_target_status">状态</string>
+    <string name="iscsi_target_connected">已连接</string>
+    <string name="iscsi_target_disconnected">未连接</string>
+    <string name="iscsi_target_enabled">已启用</string>
+    <string name="iscsi_target_disabled">已禁用</string>
+    <string name="iscsi_target_luns">关联 LUN</string>
+    <string name="iscsi_target_sessions">活动会话</string>
+    <string name="iscsi_no_lun">暂无 LUN</string>
+    <string name="iscsi_no_target">暂无 Target</string>
+    <string name="iscsi_loading">正在加载 iSCSI 信息…</string>
+    <string name="iscsi_load_failed">加载 iSCSI 信息失败</string>
+    <string name="iscsi_lun_create_title">创建 LUN</string>
+    <string name="iscsi_lun_size_gb">容量 (GB)</string>
+    <string name="iscsi_lun_delete_title">删除 LUN</string>
+    <string name="iscsi_lun_delete_confirm">确定要删除此 LUN 吗？此操作不可撤销。</string>
+    <string name="iscsi_target_create_title">创建 Target</string>
+    <string name="iscsi_target_iqn_hint">留空则自动生成 IQN</string>
+    <string name="iscsi_target_select_luns">选择要映射的 LUN</string>
+    <string name="iscsi_target_delete_title">删除 Target</string>
+    <string name="iscsi_target_delete_confirm">确定要删除此 Target 吗？此操作不可撤销。</string>
+
+    <!-- 照片时间线 -->
+    <string name="photos_tab_timeline">时间线</string>
+    <string name="photos_tab_photos">照片</string>
+    <string name="photos_tab_albums">相册</string>
+    <string name="photos_tab_places">地点</string>
+    <string name="photos_timeline_today">今天</string>
+    <string name="photos_timeline_yesterday">昨天</string>
+    <string name="photos_timeline_count">%1$d 张照片</string>
+    <string name="photos_no_timeline">暂无时间线数据</string>
+    <string name="photos_no_places">暂无地点数据</string>
+    <string name="photos_place_count">%1$d 张</string>
+    
+    <!-- 照片上传 -->
+    <string name="photos_upload">上传照片</string>
+    <string name="photos_uploading">正在上传...</string>
+    <string name="photos_upload_progress">上传中 %1$d%% (%2$d/%3$d)</string>
+    <string name="photos_upload_complete">上传完成: 成功 %1$d 个，失败 %2$d 个</string>
+    <string name="photos_upload_cancelled">上传已取消</string>
+    <string name="photos_upload_failed">上传失败</string>
+    <string name="photos_select_photos">选择照片</string>
+    <string name="photos_create_album">创建相册</string>
+    <string name="photos_create_album_title">新建相册</string>
+    <string name="photos_create_album_name">相册名称</string>
+    <string name="photos_create_album_failed">创建相册失败</string>
+    <string name="photos_album_created">相册已创建</string>
+
+    <!-- 生物识别 -->
+    <string name="biometric_subtitle">请验证您的身份</string>
+    <string name="biometric_cancel">取消</string>
+
+    <!-- 文件下载状态（Android DownloadManager） -->
+    <string name="file_download_status_pending">等待中</string>
+    <string name="file_download_status_running">下载中</string>
+    <string name="file_download_status_paused">已暂停</string>
+    <string name="file_download_status_successful">已完成</string>
+    <string name="file_download_status_failed">失败</string>
+    <string name="file_download_status_unknown">未知</string>
+
+    <!-- Download Manager -->
+    <string name="download_manager_title">下载管理</string>
+    <string name="download_empty">暂无下载任务</string>
+    <string name="download_clear_completed">清除已完成</string>
+    <string name="download_clear_confirm_message">确定要清除所有已完成和失败的下载记录吗？</string>
+    <string name="download_open">打开</string>
+    <string name="download_open_with">打开方式</string>
+    <string name="download_retry">重试</string>
+    <string name="download_cancel">取消</string>
+    <string name="download_delete">删除</string>
+    <string name="download_delete_confirm_message">确定要删除 %1$s 的下载记录吗？</string>
+    <string name="download_completed">完成时间</string>
+    <string name="download_failed">下载失败</string>
+    <string name="download_unknown_error">未知错误</string>
+    <string name="download_started">开始时间</string>
+
+    <!-- Docker 容器详情 -->
+    <string name="docker_container_detail">容器详情</string>
+    <string name="docker_container_overview">总览</string>
+    <string name="docker_container_processes">进程</string>
+    <string name="docker_container_logs">日志</string>
+    <string name="docker_basic_info">基本信息</string>
+    <string name="docker_start_time">启动时间</string>
+    <string name="docker_shortcut">快捷方式</string>
+    <string name="docker_cpu_priority">CPU优先顺序</string>
+    <string name="docker_memory_limit">内存限制</string>
+    <string name="docker_execute_cmd">执行命令</string>
+    <string name="docker_port_settings">端口设置</string>
+    <string name="docker_host_port">本地端口</string>
+    <string name="docker_container_port">容器端口</string>
+    <string name="docker_port_type">类型</string>
+    <string name="docker_volumes">卷</string>
+    <string name="docker_volume_file">文件/文件夹</string>
+    <string name="docker_mount_point">装载路径</string>
+    <string name="docker_volume_type">类型</string>
+    <string name="docker_links">链接</string>
+    <string name="docker_link_container">容器名称</string>
+    <string name="docker_link_alias">别名</string>
+    <string name="docker_networks">网络</string>
+    <string name="docker_env_variables">环境变量</string>
+    <string name="docker_no_processes">暂无进程</string>
+    <string name="docker_no_logs">暂无日志</string>
+    <string name="docker_process">进程</string>
+    <string name="docker_process_cpu">CPU</string>
+    <string name="docker_process_ram">RAM</string>
+    <string name="docker_priority_high">高</string>
+    <string name="docker_priority_medium">中</string>
+    <string name="docker_priority_low">低</string>
+    <string name="docker_memory_auto">自动</string>
+    <string name="docker_no_shortcut">无</string>
+    <string name="docker_status_page">状态页面</string>
+    <string name="docker_log_stream">输出流</string>
+
+    <!-- 用户详情 -->
+    <string name="user_detail_title">用户详情</string>
+    <string name="user_save_changes">保存更改</string>
+    <string name="user_password_will_update">将同时更新用户密码</string>
+    <string name="user_confirm_save">确定保存更改吗？</string>
+    <string name="user_username">用户名</string>
+    <string name="user_description">描述</string>
+    <string name="user_email">电子邮件</string>
+    <string name="user_new_password">新密码</string>
+    <string name="user_confirm_password">确认密码</string>
+    <string name="user_password_mismatch">密码不匹配</string>
+    <string name="user_cannot_change_password">不允许此用户修改密码</string>
+    <string name="user_password_always_valid">密码始终有效</string>
+    <string name="user_groups">所属群组</string>
+    <string name="user_no_groups">暂无群组</string>
+    <string name="user_load_failed">加载用户详情失败</string>
+    <string name="users_password_policy">密码策略</string>
+    <string name="users_account_status">账户状态</string>
+    <string name="users_status_normal">正常</string>
+    <string name="users_status_disabled">已停用</string>
+    <string name="common_save_success">保存成功</string>
+
+    <!-- 文件分享 -->
+    <string name="file_share_title">分享文件</string>
+    <string name="file_share_cancel_title">取消共享</string>
+    <string name="file_share_cancel_message">确认要取消此共享链接吗？</string>
+    <string name="file_share_back">返回</string>
+    <string name="file_share_link_label">分享链接</string>
+    <string name="file_share_times_label">访问次数限制（0为无限制）</string>
+    <string name="file_share_expired_time">过期时间: %1$s</string>
+    <string name="file_share_create_failed">无法创建分享链接</string>
+    <string name="file_share_qrcode">二维码</string>
+    <string name="file_share_copy_link">复制链接</string>
+    <string name="file_share_link_copied">链接已复制到剪贴板</string>
+
+    <!-- 浏览器 -->
+    <string name="browser_back">后退</string>
+    <string name="browser_forward">前进</string>
+    <string name="browser_refresh">刷新</string>
+    <string name="browser_open_external">在外部浏览器打开</string>
+    <string name="browser_loading">加载中…</string>
+
+    <!-- 添加共享文件夹 -->
+    <string name="share_add_title">新增共享文件夹</string>
+    <string name="share_edit_title">修改共享文件夹</string>
+    <string name="share_name">名称</string>
+    <string name="share_description">描述</string>
+    <string name="share_location">所在位置</string>
+    <string name="share_location_format">%1$s (可用容量: %2$s) - %3$s</string>
+    <string name="share_hidden">在"网上邻居"隐藏此共享文件夹</string>
+    <string name="share_hide_unreadable">对没有权限的用户隐藏子文件夹和文件</string>
+    <string name="share_enable_recycle_bin">启用回收站</string>
+    <string name="share_recycle_bin_admin_only">只允许管理员访问回收站</string>
+    <string name="share_encryption">加密共享此文件夹</string>
+    <string name="share_encryption_key">加密密钥</string>
+    <string name="share_confirm_key">确认密钥</string>
+    <string name="share_key_min_length">加密密钥最短为8位</string>
+    <string name="share_key_mismatch">加密密钥和确认密钥不一致</string>
+    <string name="share_enable_cow">启用数据总和检查码以实现高级数据完整性</string>
+    <string name="share_enable_compress">启用文件压缩</string>
+    <string name="share_enable_quota">启用共享文件夹配额</string>
+    <string name="share_quota_used">已使用 %1$s</string>
+    <string name="share_quota">配额大小</string>
+    <string name="share_quota_unit">单位</string>
+    <string name="share_name_empty">请输入共享文件夹名称</string>
+    <string name="share_quota_empty">请输入共享文件夹配额</string>
+    <string name="share_quota_integer">共享文件夹配额仅支持输入整数</string>
+    <string name="share_create_success">新增共享文件夹成功</string>
+    <string name="share_edit_success">修改共享文件夹成功</string>
+    <string name="share_create_failed">新增共享文件夹失败</string>
+    <string name="share_edit_failed">修改共享文件夹失败</string>
+    <string name="share_select_volume">选择所在位置</string>
+    <string name="share_btrfs_only">仅 Btrfs 文件系统支持</string>
+
+    <!-- 存储管理 -->
+    <string name="storage_tab_overview">系统概况</string>
+    <string name="storage_tab_volumes">存储空间</string>
+    <string name="storage_tab_pools">存储池</string>
+    <string name="storage_tab_disks">HDD/SSD</string>
+    <string name="storage_tab_hot_spare">Hot Spare</string>
+    <string name="storage_tab_ssd_cache">SSD 缓存</string>
+    <string name="storage_volumes_status">存储空间状态</string>
+    <string name="storage_pools">存储池</string>
+    <string name="storage_disk_bays">硬盘槽位</string>
+    <string name="storage_bay_count">硬盘槽位数：%1$d</string>
+    <string name="storage_no_pools">暂无存储池</string>
+    <string name="storage_no_hot_spare">无备援装置</string>
+    <string name="storage_no_ssd_cache">无 SSD 缓存</string>
+    <string name="storage_pool_id">存储池 %1$d</string>
+    <string name="storage_volume_id">存储空间 %1$d</string>
+    <string name="storage_no_data_protection">（无数据保护）</string>
+    <string name="storage_disk_info">硬盘信息</string>
+    <string name="storage_allocation">存储分配</string>
+    <string name="storage_disk_location">位置</string>
+    <string name="storage_disk_type">硬盘类型</string>
+    <string name="storage_disk_pool">存储池</string>
+    <string name="storage_disk_status">硬盘分配状态</string>
+    <string name="storage_disk_health">健康状态</string>
+    <string name="storage_disk_temp">%1$d°C</string>
+    <string name="storage_disk_remain_life">预计寿命</string>
+    <string name="storage_disk_bad_sectors">坏扇区数量</string>
+    <string name="storage_disk_serial">序列号</string>
+    <string name="storage_disk_firmware">固件版本</string>
+    <string name="storage_disk_4kn">4K 原生硬盘</string>
+    <string name="storage_hot_spare_size">容量：%1$s</string>
+    <string name="storage_hot_spare_disks">可用 Hot Spare 硬盘</string>
+    <string name="storage_hot_spare_count">共 %1$d 块</string>
+    <string name="storage_ssd_cache_prefix">SSD 缓存 </string>
+    <string name="storage_read_only">只读</string>
+    <string name="storage_read_write">读写</string>
+    <string name="storage_status_normal">正常</string>
+    <string name="storage_status_checking">正在检查硬盘</string>
+    <string name="storage_status_attention">注意</string>
+    <string name="storage_status_degraded">已降级</string>
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+
+    <!-- 开源协议 -->
+    <string name="open_source_title">开源软件声明</string>
+    <string name="open_source_desc">本应用使用了以下开源软件</string>
+    <string name="open_source_licenses">许可证</string>
+    <string name="open_source_version">版本</string>
+    <string name="open_source_no_license">无许可证信息</string>
+
+    <!-- 常用开源许可证 -->
+    <string name="license_apache_20">Apache License 2.0</string>
+    <string name="license_mit">MIT License</string>
+    <string name="license_bsd">BSD License</string>
+    <string name="license_gpl">GNU General Public License</string>
+    <string name="license_lgpl">GNU Lesser General Public License</string>
+
+</resources>
