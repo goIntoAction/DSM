@@ -32,21 +32,24 @@ android {
     }
 
     signingConfigs {
-        create("release") {
-            // 从 gradle.properties 或环境变量读取签名配置
-            storeFile = file(System.getenv("RELEASE_STORE_FILE") ?: findProperty("RELEASE_STORE_FILE") as? String ?: "")
-            storePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: findProperty("RELEASE_STORE_PASSWORD") as? String ?: ""
-            keyPassword = System.getenv("RELEASE_KEY_PASSWORD") ?: findProperty("RELEASE_KEY_PASSWORD") as? String ?: ""
-            keyAlias = System.getenv("RELEASE_KEY_ALIAS") ?: findProperty("RELEASE_KEY_ALIAS") as? String ?: ""
+        // 只有在签名文件存在时才创建 release 签名配置
+        val storeFilePath = System.getenv("RELEASE_STORE_FILE") ?: findProperty("RELEASE_STORE_FILE") as? String
+        if (storeFilePath != null && storeFilePath.isNotEmpty() && file(storeFilePath).exists()) {
+            create("release") {
+                storeFile = file(storeFilePath)
+                storePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: findProperty("RELEASE_STORE_PASSWORD") as? String ?: ""
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD") ?: findProperty("RELEASE_KEY_PASSWORD") as? String ?: ""
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS") ?: findProperty("RELEASE_KEY_ALIAS") as? String ?: ""
+            }
         }
     }
-    
+
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            // 如果签名配置存在则使用，否则回退到未签名
-            signingConfig = signingConfigs.findByName("release").takeIf { it?.storeFile?.exists() == true }
+            // 如果签名配置存在则使用，否则使用默认调试签名
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

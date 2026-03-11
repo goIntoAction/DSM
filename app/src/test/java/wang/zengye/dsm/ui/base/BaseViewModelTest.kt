@@ -203,7 +203,8 @@ class BaseViewModelTest {
 data class TestState(
     val name: String = "",
     val count: Int = 0,
-    val isLoading: Boolean = false
+    override val isLoading: Boolean = false,
+    override val error: String? = null
 ) : BaseState
 
 sealed class TestIntent : BaseIntent {
