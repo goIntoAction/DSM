@@ -33,11 +33,11 @@ android {
 
     signingConfigs {
         create("release") {
-            // 从 gradle.properties 读取签名配置（如果存在）
-            storeFile = file(System.getenv("RELEASE_STORE_FILE") ?: properties.getProperty("RELEASE_STORE_FILE") ?: "")
-            storePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: properties.getProperty("RELEASE_STORE_PASSWORD") ?: ""
-            keyPassword = System.getenv("RELEASE_KEY_PASSWORD") ?: properties.getProperty("RELEASE_KEY_PASSWORD") ?: ""
-            keyAlias = System.getenv("RELEASE_KEY_ALIAS") ?: properties.getProperty("RELEASE_KEY_ALIAS") ?: ""
+            // 从 gradle.properties 或环境变量读取签名配置
+            storeFile = file(System.getenv("RELEASE_STORE_FILE") ?: findProperty("RELEASE_STORE_FILE") as? String ?: "")
+            storePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: findProperty("RELEASE_STORE_PASSWORD") as? String ?: ""
+            keyPassword = System.getenv("RELEASE_KEY_PASSWORD") ?: findProperty("RELEASE_KEY_PASSWORD") as? String ?: ""
+            keyAlias = System.getenv("RELEASE_KEY_ALIAS") ?: findProperty("RELEASE_KEY_ALIAS") as? String ?: ""
         }
     }
     
