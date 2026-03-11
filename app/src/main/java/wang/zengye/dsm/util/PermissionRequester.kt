@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.coroutines.CoroutineScope
@@ -112,7 +113,7 @@ object PermissionRequester {
 fun rememberPermissionLauncher(
     onResult: (Map<String, Boolean>) -> Unit = {}
 ): PermissionRequester.PermissionLauncher {
-    val activity = androidx.compose.ui.platform.LocalContext.current as? ComponentActivity
+    val activity = androidx.activity.compose.LocalActivity.current
         ?: return remember { object : PermissionRequester.PermissionLauncher {
             override fun requestPermissions(permissions: Array<String>) {}
         }}

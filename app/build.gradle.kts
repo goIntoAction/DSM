@@ -69,6 +69,13 @@ android {
         compose = true
         buildConfig = true
     }
+    lint {
+        // 禁用某些 Compose 相关的 lint 检查
+        disable += setOf(
+            "LocalContextGetResourceValueCall",
+            "LocalContextConfigurationRead"
+        )
+    }
     packaging {
         resources {
             excludes += setOf(

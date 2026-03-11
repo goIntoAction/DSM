@@ -2,6 +2,7 @@ package wang.zengye.dsm.ui.terminal
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
@@ -76,7 +77,11 @@ class TerminalViewModel @Inject constructor(
 
     private fun startTerminalService() {
         val intent = Intent(context, TerminalService::class.java)
-        context.startForegroundService(intent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.startForegroundService(intent)
+        } else {
+            context.startService(intent)
+        }
     }
 
     override fun onCleared() {
