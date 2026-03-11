@@ -3,7 +3,7 @@
 [![Android](https://img.shields.io/badge/Android-7.0+-green.svg)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.3.10-purple.svg)](https://kotlinlang.org/)
 [![Compose](https://img.shields.io/badge/Compose-2026.02.01-blue.svg)](https://developer.android.com/jetpack/compose)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 一个功能完整的 Synology DSM Android 客户端应用，为你提供便捷的移动端 NAS 管理体验。
 
@@ -99,17 +99,6 @@
 ---
 
 ## 📦 安装
-
-### 下载 APK
-
-从 [Releases](https://github.com/zengye/DSM/releases) 下载最新版本的 APK。
-
-提供多种架构版本：
-- `arm64-v8a` - 64 位 ARM 设备（推荐）
-- `armeabi-v7a` - 32 位 ARM 设备
-- `x86_64` - 64 位 x86 设备（模拟器）
-- `x86` - 32 位 x86 设备（模拟器）
-- `universal` - 包含所有架构（体积较大）
 
 ### 自行编译
 
@@ -222,31 +211,9 @@ app/src/main/java/wang/zengye/dsm/
 
 ---
 
-## 🤝 贡献
-
-欢迎贡献代码！请遵循以下步骤：
-
-1. Fork 本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 提交 Pull Request
-
-### 开发规范
-
-- 使用 Kotlin 官方代码风格
-- 每行最大 120 字符
-- 4 空格缩进
-- 优先使用表达式而非语句
-- 新增功能需包含单元测试
-
-详见 [AGENTS.md](AGENTS.md)
-
----
-
 ## 📄 许可证
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+本项目采用 Apache 2.0 许可证 - 详见 [LICENSE](LICENSE) 文件
 
 ---
 
@@ -259,14 +226,6 @@ app/src/main/java/wang/zengye/dsm/
 - [Vico](https://github.com/patrykandpatrick/vico)
 - [MPV Android](https://github.com/mpv-android/mpv-android)
 - [ConnectBot](https://github.com/connectbot/connectbot)
-
----
-
-## 📬 联系方式
-
-- 作者：zengye
-- Email: [你的邮箱]
-- Issues: [GitHub Issues](https://github.com/zengye/DSM/issues)
 
 ---
 
