@@ -31,10 +31,22 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            // 从 gradle.properties 读取签名配置（如果存在）
+            storeFile = file(System.getenv("RELEASE_STORE_FILE") ?: properties.getProperty("RELEASE_STORE_FILE") ?: "")
+            storePassword = System.getenv("RELEASE_STORE_PASSWORD") ?: properties.getProperty("RELEASE_STORE_PASSWORD") ?: ""
+            keyPassword = System.getenv("RELEASE_KEY_PASSWORD") ?: properties.getProperty("RELEASE_KEY_PASSWORD") ?: ""
+            keyAlias = System.getenv("RELEASE_KEY_ALIAS") ?: properties.getProperty("RELEASE_KEY_ALIAS") ?: ""
+        }
+    }
+    
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            // 如果签名配置存在则使用，否则回退到未签名
+            signingConfig = signingConfigs.findByName("release").takeIf { it?.storeFile?.exists() == true }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

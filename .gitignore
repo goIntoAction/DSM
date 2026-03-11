@@ -126,3 +126,6 @@ Thumbs.db
 
 # Amazon CodeWhisperer
 .aws/
+
+dsm-release-key.jks
+dsm-keystore.base64
