@@ -219,7 +219,7 @@ app/src/main/java/wang/zengye/dsm/
 - [Retrofit](https://square.github.io/retrofit/)
 - [Coil](https://coil-kt.github.io/coil/)
 - [Vico](https://github.com/patrykandpatrick/vico)
-- [MPV Android](https://github.com/mpv-android/mpv-android)
+- [MPV Android](https://github.com/abdallahmehiz/mpv-android)
 - [ConnectBot](https://github.com/connectbot/connectbot)
 
 ---
