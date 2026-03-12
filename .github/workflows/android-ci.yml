@@ -3,8 +3,17 @@ name: Android CI
 on:
   push:
     branches: [main, master, develop]
+    tags:
+      - 'v*'
   pull_request:
     branches: [main, master, develop]
+  workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Create a release with APKs'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   build:
@@ -39,30 +48,57 @@ jobs:
         EOF
       continue-on-error: true
     
-    - name: Build with Gradle
-      run: ./gradlew build --no-daemon
-    
-    - name: Run unit tests
-      run: ./gradlew test --no-daemon
-    
     - name: Build debug APK
       run: ./gradlew assembleDebug --no-daemon
     
     - name: Build release APK
       run: ./gradlew assembleRelease --no-daemon
     
-    - name: Upload debug APK
+    - name: Run unit tests
+      run: ./gradlew test --no-daemon
+    
+    - name: Upload debug APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/
         if-no-files-found: ignore
     
-    - name: Upload release APKs
+    - name: Upload release APKs artifact
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: |
-          app/build/outputs/apk/release/
-          app/build/outputs/apk/release/**/*.apk
+        path: app/build/outputs/apk/release/*.apk
         if-no-files-found: ignore
+    
+    - name: Prepare release assets
+      if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && github.event.inputs.create_release == 'true')
+      run: |
+        mkdir -p release-assets
+        cp app/build/outputs/apk/release/*.apk release-assets/ || true
+        cp app/build/outputs/apk/debug/*.apk release-assets/ || true
+        ls -la release-assets/
+    
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && github.event.inputs.create_release == 'true')
+      uses: softprops/action-gh-release@v2
+      with:
+        name: DSM ${{ github.ref_name }}
+        body: |
+          ## DSM Android Client
+          
+          ### 下载说明
+          - `app-arm64-v8a-release.apk` - 64位 ARM 设备（推荐大多数手机）
+          - `app-armeabi-v7a-release.apk` - 32位 ARM 设备
+          - `app-x86_64-release.apk` - x86_64 模拟器/设备
+          - `app-x86-release.apk` - x86 模拟器/设备
+          - `app-universal-release.apk` - 通用版（包含所有架构，体积较大）
+          - `app-debug.apk` - 调试版本
+          
+          ### 更新内容
+          请查看 [Commits](https://github.com/${{ github.repository }}/commits/${{ github.ref_name }})
+        files: release-assets/*.apk
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
