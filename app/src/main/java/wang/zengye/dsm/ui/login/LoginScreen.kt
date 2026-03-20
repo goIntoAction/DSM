@@ -60,7 +60,7 @@ fun LoginScreen(
         }
     }
 
-    // 自动登录
+    // 自动登录：当有保存的凭据时自动尝试登录
     LaunchedEffect(uiState.host, uiState.account, uiState.password) {
         viewModel.sendIntent(LoginIntent.AutoLogin)
     }

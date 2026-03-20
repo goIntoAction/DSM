@@ -87,12 +87,9 @@ object BiometricHelper {
             .setSubtitle(subtitle)
             .setAllowedAuthenticators(AUTHENTICATORS)
 
-        // 只有在使用生物识别时才需要设置 negative button
-        // 使用 DEVICE_CREDENTIAL 时不能设置 negative button
-        val biometricStatus = isBiometricAvailable(activity)
-        if (biometricStatus == BiometricStatus.AVAILABLE) {
-            promptInfoBuilder.setNegativeButtonText(appString(R.string.biometric_cancel))
-        }
+        // 注意：当 AUTHENTICATORS 包含 DEVICE_CREDENTIAL 时，不能设置 negative button
+        // 因为系统会自动显示"使用PIN/图案/密码"选项
+        // 所以这里不设置 negative button
 
         biometricPrompt.authenticate(promptInfoBuilder.build())
     }

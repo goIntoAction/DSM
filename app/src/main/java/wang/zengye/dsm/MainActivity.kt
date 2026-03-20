@@ -4,11 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Fingerprint
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.rememberNavController
@@ -33,10 +39,19 @@ class MainActivity : FragmentActivity() {
         private const val TAG = "MainActivity"
     }
 
-    private var isAuthenticating = false
+    // 认证状态
+    // null: 检查中
+    // "checking": 正在显示生物识别
+    // "success": 生物识别成功，可以显示登录页
+    // "failed": 生物识别失败/取消，需要重试
+    // "skip": 无需生物识别，直接进入
+    private var authState by mutableStateOf<String?>(null)
+    private var authError by mutableStateOf<String?>(null)
+    private var hasCheckedAuth = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate: starting")
 
         enableEdgeToEdge()
 
@@ -48,7 +63,6 @@ class MainActivity : FragmentActivity() {
                 ) {
                     val navController = rememberNavController()
 
-                    // 注册权限启动器到 PermissionRequester
                     val permissionLauncher = rememberPermissionLauncher()
                     DisposableEffect(permissionLauncher) {
                         PermissionRequester.registerActivity(this@MainActivity, permissionLauncher)
@@ -57,17 +71,14 @@ class MainActivity : FragmentActivity() {
                         }
                     }
 
-                    // 初始化 API 客户端并检查启动认证
                     LaunchedEffect(Unit) {
                         DsmApiHelper.init()
-                        checkLaunchAuth()
                     }
 
-                    // 监听会话过期事件，自动重登录失败时跳转登录页
                     LaunchedEffect(navController) {
                         DsmApiHelper.sessionExpiredEvent
                             .onEach {
-                                Log.w(TAG, "Session expired and re-login failed, navigating to login")
+                                Log.w(TAG, "Session expired, navigating to login")
                                 navController.navigate(DsmRoute.Login) {
                                     popUpTo(0) { inclusive = true }
                                 }
@@ -75,51 +86,83 @@ class MainActivity : FragmentActivity() {
                             .launchIn(this)
                     }
 
-                    DSMNavHost(
-                        navController = navController,
-                        onAuthRequired = { showBiometricAuth() }
-                    )
+                    // 添加日志跟踪状态变化
+                    LaunchedEffect(authState) {
+                        Log.d(TAG, "authState changed to: $authState")
+                    }
+
+                    when (authState) {
+                        null, "checking" -> {
+                            Log.d(TAG, "Showing loading indicator, authState=$authState")
+                            // 检查中或等待生物识别
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                CircularProgressIndicator()
+                            }
+                        }
+                        "failed" -> {
+                            Log.d(TAG, "Showing auth failed screen")
+                            // 生物识别失败，显示重试界面
+                            AuthFailedScreen(
+                                error = authError,
+                                onRetry = {
+                                    authError = null
+                                    authState = "checking"
+                                    showBiometricAuth()
+                                }
+                            )
+                        }
+                        "success", "skip" -> {
+                            Log.d(TAG, "Showing DSMNavHost, authState=$authState")
+                            // 认证成功或无需认证，显示导航
+                            DSMNavHost(navController = navController)
+                        }
+                    }
                 }
             }
         }
     }
 
-    /**
-     * 检查是否需要启动认证
-     */
+    override fun onResume() {
+        super.onResume()
+        if (!hasCheckedAuth) {
+            hasCheckedAuth = true
+            // 延迟调用，确保 Activity 完全准备好显示生物识别对话框
+            window.decorView.post {
+                checkLaunchAuth()
+            }
+        }
+    }
+
     private fun checkLaunchAuth() {
         lifecycleScope.launch {
             try {
                 val launchAuth = SettingsManager.launchAuth.first()
-                val savedSid = SettingsManager.sid.value
-                val savedHost = SettingsManager.host.first()
-                val savedAccount = SettingsManager.account.first()
 
-                // 如果没有保存会话，直接跳过
-                if (savedSid.isEmpty() || savedHost.isEmpty() || savedAccount.isEmpty()) {
-                    Log.d(TAG, "No saved session, skipping launch auth")
-                    return@launch
-                }
+                Log.d(TAG, "checkLaunchAuth: launchAuth=$launchAuth")
 
-                // 如果启用了启动认证
-                if (launchAuth && !isAuthenticating) {
-                    isAuthenticating = true
+                // 启用了启动认证，显示生物识别
+                if (launchAuth) {
+                    Log.d(TAG, "Launch auth enabled, showing biometric")
+                    authState = "checking"
                     showBiometricAuth()
                 } else {
-                    // 直接恢复会话
-                    restoreSession()
+                    // 未启用认证，直接进入登录页
+                    Log.d(TAG, "Launch auth disabled, going to login")
+                    authState = "skip"
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error checking launch auth", e)
+                authState = "skip"
             }
         }
     }
 
-    /**
-     * 显示系统认证（生物识别或设备凭据）
-     */
     private fun showBiometricAuth() {
         val authStatus = BiometricHelper.isAuthAvailable(this)
+        Log.d(TAG, "showBiometricAuth: authStatus=$authStatus")
 
         when (authStatus) {
             BiometricHelper.AuthStatus.AVAILABLE -> {
@@ -128,50 +171,80 @@ class MainActivity : FragmentActivity() {
                     title = getString(R.string.biometric_title),
                     subtitle = getString(R.string.biometric_subtitle_auto_login),
                     onSuccess = {
-                        Log.d(TAG, "Auth succeeded")
-                        restoreSession()
+                        Log.d(TAG, "Biometric auth succeeded")
+                        // 生物识别成功，进入登录页
+                        authState = "success"
                     },
                     onError = { error ->
-                        Log.e(TAG, "Auth error: $error")
-                        // 验证失败，不自动登录
-                        isAuthenticating = false
+                        Log.e(TAG, "Biometric auth error: $error")
+                        authError = error
+                        authState = "failed"
                     },
                     onCancel = {
-                        Log.d(TAG, "Auth cancelled")
-                        isAuthenticating = false
+                        Log.d(TAG, "Biometric auth cancelled")
+                        authError = getString(R.string.biometric_cancelled)
+                        authState = "failed"
                     }
                 )
             }
             else -> {
-                // 没有可用的认证方式，直接恢复会话
-                Log.d(TAG, "No auth available, restoring session")
-                restoreSession()
+                // 设备不支持生物识别，直接进入登录页
+                Log.d(TAG, "Biometric not available, going to login")
+                authState = "skip"
             }
         }
     }
+}
 
-    /**
-     * 恢复会话
-     */
-    private fun restoreSession() {
-        lifecycleScope.launch {
-            try {
-                val savedSid = SettingsManager.sid.value
-                val savedCookie = SettingsManager.cookie.value
-                val savedHost = SettingsManager.host.first()
-                val savedSynoToken = SettingsManager.synoToken.value
+@Composable
+private fun AuthFailedScreen(
+    error: String?,
+    onRetry: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(32.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.Fingerprint,
+            contentDescription = null,
+            modifier = Modifier.size(80.dp),
+            tint = MaterialTheme.colorScheme.error
+        )
 
-                if (savedSid.isNotEmpty() && savedHost.isNotEmpty()) {
-                    DsmApiHelper.updateSession(savedSid, savedCookie, savedHost)
-                    if (savedSynoToken.isNotEmpty()) {
-                        DsmApiHelper.updateSynoToken(savedSynoToken)
-                    }
-                    Log.d(TAG, "Session restored successfully")
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "Error restoring session", e)
-            }
-            isAuthenticating = false
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(
+            text = stringResource(R.string.biometric_auth_failed_title),
+            style = MaterialTheme.typography.headlineSmall,
+            color = MaterialTheme.colorScheme.onSurface
+        )
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Text(
+            text = error ?: stringResource(R.string.biometric_auth_failed_message),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        Button(
+            onClick = onRetry,
+            modifier = Modifier.fillMaxWidth(0.6f)
+        ) {
+            Icon(
+                imageVector = Icons.Default.Refresh,
+                contentDescription = null,
+                modifier = Modifier.size(18.dp)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(stringResource(R.string.biometric_retry))
         }
     }
 }

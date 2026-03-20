@@ -35,3 +35,37 @@
 
 # Keep Tink encryption library classes
 -keep class com.google.crypto.tink.** { *; }
+
+# Kotlinx Serialization - 防止序列化器被移除
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.AnnotationsKt
+
+-keepclassmembers class kotlinx.serialization.json.** {
+    *** Companion;
+}
+-keepclasseswithmembers class kotlinx.serialization.json.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
+
+# 保留 DsmRoute 对象及其所有嵌套类（路由类）的序列化器
+-keep class wang.zengye.dsm.navigation.DsmRoute { *; }
+-keep class wang.zengye.dsm.navigation.DsmRoute$* { *; }
+
+# 保留所有 @Serializable 类的序列化器（包括 data object 和 data class）
+-keep @kotlinx.serialization.Serializable class * { *; }
+-keepclassmembers class * {
+    @kotlinx.serialization.* <methods>;
+}
+
+# 保留序列化器伴生对象
+-keepclassmembers class * {
+    *** Companion;
+}
+-keep class **$$serializer { *; }
+-keep class **$Companion { *; }
+
+# 保留 Kotlinx Serialization 内部类
+-keep class kotlinx.serialization.** { *; }
+-keepclassmembers class kotlinx.serialization.** {
+    *;
+}

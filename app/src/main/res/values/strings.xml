@@ -1616,6 +1616,10 @@
     <string name="biometric_title">身份验证</string>
     <string name="biometric_subtitle_auto_login">验证成功后自动登录</string>
     <string name="biometric_negative_button">使用密码</string>
+    <string name="biometric_auth_failed_title">身份验证失败</string>
+    <string name="biometric_auth_failed_message">请重试验证身份</string>
+    <string name="biometric_cancelled">验证已取消</string>
+    <string name="biometric_retry">重试验证</string>
 
     <!-- Time -->
     <string name="time_just_now">刚刚</string>
