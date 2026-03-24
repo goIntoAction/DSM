@@ -9,10 +9,25 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class DockerImageItemDto(
     @Json(name = "id") val id: String?,
-    @Json(name = "repo_tags") val repoTags: List<String>?,
+    @Json(name = "repository") val repository: String?,
+    @Json(name = "tags") val tags: List<String>?,
     @Json(name = "size") val size: Long?,
     @Json(name = "created") val created: Long?,
     @Json(name = "is_dsm") val isDsm: Boolean?
+) {
+    // 兼容旧代码
+    val repoTags: List<String>? get() = tags?.map { if (repository != null) "$repository:$it" else it }
+}
+
+/**
+ * Docker 镜像列表数据
+ */
+@JsonClass(generateAdapter = true)
+data class DockerImageDataDto(
+    @Json(name = "images") val images: List<DockerImageItemDto>?,
+    @Json(name = "total") val total: Int?,
+    @Json(name = "offset") val offset: Int?,
+    @Json(name = "limit") val limit: Int?
 )
 
 /**
@@ -22,8 +37,12 @@ data class DockerImageItemDto(
  */
 @JsonClass(generateAdapter = true)
 data class DockerImageListDto(
-    @Json(name = "images") val images: List<DockerImageItemDto>?
-)
+    @Json(name = "data") val data: DockerImageDataDto?,
+    @Json(name = "success") val success: Boolean?
+) {
+    // 兼容旧代码，直接访问 images
+    val images: List<DockerImageItemDto>? get() = data?.images
+}
 
 /**
  * Docker 删除镜像响应

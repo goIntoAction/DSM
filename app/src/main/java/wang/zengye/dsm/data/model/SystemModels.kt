@@ -13,9 +13,10 @@ data class ApiResponse<T>(
     val data: T? = null
 )
 
+@JsonClass(generateAdapter = true)
 data class ApiError(
-    val code: Int = 0,
-    val errors: List<String>? = null
+    @Json(name = "code") val code: Int = 0,
+    @Json(name = "errors") val errors: List<String>? = null
 )
 
 /**

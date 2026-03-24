@@ -95,6 +95,13 @@ class DockerViewModel @Inject constructor(
     private fun parseContainers(response: wang.zengye.dsm.data.model.docker.DockerContainerListDto): List<DockerContainer> {
         val containers = mutableListOf<DockerContainer>()
 
+        // 单次请求格式：data.containers 直接包含容器列表
+        response.data?.containers?.forEach { item ->
+            val container = parseContainerItem(item)
+            containers.add(container)
+        }
+
+        // 批量请求格式：result 列表中每个元素的 data.containers
         response.result?.forEach { result ->
             if (result.success != true) return@forEach
             if (result.api != "SYNO.Docker.Container") return@forEach

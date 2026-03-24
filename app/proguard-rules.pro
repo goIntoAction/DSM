@@ -75,3 +75,13 @@
 -keep class org.connectbot.ssh2.** { *; }
 -dontwarn com.trilead.ssh2.**
 -dontwarn org.connectbot.ssh2.**
+
+# Moshi - 保留 @JsonClass 注解的类和生成的 JsonAdapter
+-keepclassmembers class * {
+    @com.squareup.moshi.* <methods>;
+}
+-keep @com.squareup.moshi.JsonClass class * { *; }
+-keep class **JsonAdapter { *; }
+-keep class **$JsonAdapter { *; }
+-keep class **Adapter { *; }
+-dontwarn com.squareup.moshi.**
