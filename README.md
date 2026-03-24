@@ -7,7 +7,7 @@
 
 一个功能完整的 Synology DSM Android 客户端应用，为你提供便捷的移动端 NAS 管理体验。
 
-![Screenshot](docs/screenshots/dashboard.png)
+<img src="docs/screenshots/dashboard.png" width="300">
 
 ---
 
