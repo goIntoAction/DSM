@@ -69,3 +69,9 @@
 -keepclassmembers class kotlinx.serialization.** {
     *;
 }
+
+# SSH 库 (connectbot/sshlib) - 保留所有加密相关类
+-keep class com.trilead.ssh2.** { *; }
+-keep class org.connectbot.ssh2.** { *; }
+-dontwarn com.trilead.ssh2.**
+-dontwarn org.connectbot.ssh2.**
