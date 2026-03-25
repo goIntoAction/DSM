@@ -190,7 +190,7 @@ class PerformanceViewModel @Inject constructor(
     }
 
     override fun onCleared() {
-        refreshJob?.cancel()
         super.onCleared()
+        refreshJob?.cancel()
     }
 }
