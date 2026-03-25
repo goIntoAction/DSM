@@ -7,4 +7,6 @@ sealed class DashboardIntent : BaseIntent {
     data object Refresh : DashboardIntent()
     data object Shutdown : DashboardIntent()
     data object Reboot : DashboardIntent()
+    data object StartAutoRefresh : DashboardIntent()
+    data object StopAutoRefresh : DashboardIntent()
 }

@@ -1,6 +1,8 @@
 package wang.zengye.dsm.ui.resource_monitor
 
 import android.util.Log
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.BufferOverflow
@@ -44,7 +46,7 @@ data class PerformanceUiState(
 @HiltViewModel
 class PerformanceViewModel @Inject constructor(
     private val systemRepository: SystemRepository
-) : BaseViewModel<PerformanceUiState, PerformanceIntent, PerformanceEvent>() {
+) : BaseViewModel<PerformanceUiState, PerformanceIntent, PerformanceEvent>(), DefaultLifecycleObserver {
 
     companion object {
         private const val TAG = "PerformanceViewModel"
@@ -168,6 +170,22 @@ class PerformanceViewModel @Inject constructor(
             Log.e(TAG, "Utilization API failed", error)
             _uiState.update { it.copy(error = error.message, isLoading = false) }
             _events.emit(PerformanceEvent.Error(error.message ?: "Failed to load data"))
+        }
+    }
+
+    // ===== LifecycleObserver: 退后台/锁屏时停止自动刷新 =====
+    override fun onStop(owner: LifecycleOwner) {
+        super.onStop(owner)
+        refreshJob?.cancel()
+        refreshJob = null
+        Log.d(TAG, "onStop: 自动刷新已停止")
+    }
+
+    override fun onStart(owner: LifecycleOwner) {
+        super.onStart(owner)
+        if (_uiState.value.refreshInterval > 0) {
+            startAutoRefresh()
+            Log.d(TAG, "onStart: 自动刷新已恢复")
         }
     }
 

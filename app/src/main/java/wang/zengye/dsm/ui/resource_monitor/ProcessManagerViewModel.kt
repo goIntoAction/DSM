@@ -1,6 +1,8 @@
 package wang.zengye.dsm.ui.resource_monitor
 
 import android.util.Log
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.BufferOverflow
@@ -52,7 +54,7 @@ data class ProcessManagerUiState(
 @HiltViewModel
 class ProcessManagerViewModel @Inject constructor(
     private val systemRepository: SystemRepository
-) : BaseViewModel<ProcessManagerUiState, ProcessManagerIntent, ProcessManagerEvent>() {
+) : BaseViewModel<ProcessManagerUiState, ProcessManagerIntent, ProcessManagerEvent>(), DefaultLifecycleObserver {
 
     companion object {
         private const val TAG = "ProcessManagerViewModel"
@@ -188,6 +190,20 @@ class ProcessManagerViewModel @Inject constructor(
     private suspend fun refresh() {
         _uiState.update { it.copy(isRefreshing = true) }
         fetchProcesses()
+    }
+
+    // ===== LifecycleObserver: 退后台/锁屏时停止自动刷新 =====
+    override fun onStop(owner: LifecycleOwner) {
+        super.onStop(owner)
+        refreshJob?.cancel()
+        refreshJob = null
+        Log.d(TAG, "onStop: 自动刷新已停止")
+    }
+
+    override fun onStart(owner: LifecycleOwner) {
+        super.onStart(owner)
+        startAutoRefresh()
+        Log.d(TAG, "onStart: 自动刷新已恢复")
     }
 
     override fun onCleared() {

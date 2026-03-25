@@ -1,5 +1,8 @@
 package wang.zengye.dsm.ui.download
 
+import android.util.Log
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
@@ -49,7 +52,11 @@ data class PeerListUiState(
 @HiltViewModel
 class PeerListViewModel @Inject constructor(
     private val downloadRepository: DownloadRepository
-) : BaseViewModel<PeerListUiState, PeerListIntent, PeerListEvent>() {
+) : BaseViewModel<PeerListUiState, PeerListIntent, PeerListEvent>(), DefaultLifecycleObserver {
+
+    companion object {
+        private const val TAG = "PeerListViewModel"
+    }
 
     private val _uiState = MutableStateFlow(PeerListUiState())
     override val state: StateFlow<PeerListUiState> = _uiState.asStateFlow()
@@ -171,6 +178,20 @@ class PeerListViewModel @Inject constructor(
     private fun stopAutoRefresh() {
         refreshJob?.cancel()
         refreshJob = null
+    }
+
+    // ===== LifecycleObserver: 退后台/锁屏时停止自动刷新 =====
+    override fun onStop(owner: LifecycleOwner) {
+        super.onStop(owner)
+        refreshJob?.cancel()
+        refreshJob = null
+        Log.d(TAG, "onStop: 自动刷新已停止")
+    }
+
+    override fun onStart(owner: LifecycleOwner) {
+        super.onStart(owner)
+        startAutoRefresh()
+        Log.d(TAG, "onStart: 自动刷新已恢复")
     }
 
     override fun onCleared() {
