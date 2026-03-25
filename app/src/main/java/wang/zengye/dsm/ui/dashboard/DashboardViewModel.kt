@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import dagger.hilt.android.lifecycle.HiltViewModel
 import wang.zengye.dsm.data.api.DsmApiHelper
@@ -176,6 +177,11 @@ class DashboardViewModel @Inject constructor(
     }
 
     private suspend fun loadData(showLoading: Boolean = true, isManualRefresh: Boolean = false) {
+        loadDataOnce(showLoading, isManualRefresh)
+        startAutoRefresh()
+    }
+
+    private suspend fun loadDataOnce(showLoading: Boolean = true, isManualRefresh: Boolean = false) {
         val shouldShowLoading = showLoading && !hasData(_uiState.value)
         _uiState.update {
             it.copy(
@@ -363,7 +369,6 @@ class DashboardViewModel @Inject constructor(
             }
 
             _uiState.update { it.copy(isLoading = false, isRefreshing = false) }
-        startAutoRefresh()
     }
 
     private fun VolumeInfo.toVolumeInfoUi(): VolumeInfoUi {
@@ -418,8 +423,10 @@ class DashboardViewModel @Inject constructor(
         val duration = _uiState.value.refreshDuration
         if (duration > 0) {
             refreshJob = viewModelScope.launch {
-                delay(duration * 1000L)
-                loadData(showLoading = false)
+                while (isActive) {
+                    delay(duration * 1000L)
+                    loadDataOnce(showLoading = false)
+                }
             }
         }
     }

@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import dagger.hilt.android.lifecycle.HiltViewModel
 import wang.zengye.dsm.data.repository.PerformanceHistoryPoint
@@ -110,6 +111,11 @@ class PerformanceViewModel @Inject constructor(
     }
 
     private suspend fun loadData() {
+        loadDataOnce()
+        startAutoRefresh()
+    }
+
+    private suspend fun loadDataOnce() {
         _uiState.update { it.copy(isLoading = false, error = null) }
 
         systemRepository.getUtilization().onSuccess { response ->
@@ -171,9 +177,6 @@ class PerformanceViewModel @Inject constructor(
                     )
                 )
 
-                // 启动定时刷新
-                startAutoRefresh()
-
             } catch (e: Exception) {
                 Log.e(TAG, "Parse error", e)
                 _uiState.update { it.copy(error = e.message) }
@@ -191,8 +194,10 @@ class PerformanceViewModel @Inject constructor(
         val duration = _uiState.value.refreshDuration
         if (duration > 0) {
             refreshJob = viewModelScope.launch {
-                delay(duration * 1000L)
-                loadData()
+                while (isActive) {
+                    delay(duration * 1000L)
+                    loadDataOnce()
+                }
             }
         }
     }
