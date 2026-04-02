@@ -71,8 +71,8 @@ class TaskManagerViewModel @Inject constructor(
         viewModelScope.launch {
             val duration = SettingsManager.refreshDuration.first()
             _uiState.update { it.copy(refreshDuration = duration) }
+            sendIntent(TaskManagerIntent.LoadData)
         }
-        sendIntent(TaskManagerIntent.LoadData)
     }
 
     override suspend fun processIntent(intent: TaskManagerIntent) {
@@ -83,43 +83,7 @@ class TaskManagerViewModel @Inject constructor(
     }
 
     private suspend fun loadData() {
-        _uiState.update { it.copy(isLoading = false, error = null) }
-
-        // 获取进程列表
-        systemRepository.getProcessList().onSuccess { response ->
-            val processList = response.process?.map { item ->
-                ProcessInfo(
-                    pid = item.pid ?: 0,
-                    name = item.name ?: "",
-                    user = item.user ?: "",
-                    cpu = item.cpu ?: 0.0,
-                    memory = item.memoryPercent ?: 0.0,
-                    status = item.state ?: ""
-                )
-            } ?: emptyList()
-
-            _uiState.update { it.copy(processes = processList) }
-        }.onFailure { error ->
-            Log.e(TAG, "Load process error", error)
-        }
-
-        // 获取服务列表
-        systemRepository.getProcessGroup().onSuccess { response ->
-            val serviceList = response.data?.services?.map { item ->
-                ServiceInfo(
-                    name = item.name ?: "",
-                    displayName = item.displayName ?: "",
-                    status = item.status ?: "",
-                    enabled = item.enabled ?: false
-                )
-            } ?: emptyList()
-
-            _uiState.update { it.copy(services = serviceList) }
-        }.onFailure { error ->
-            Log.e(TAG, "Load service error", error)
-        }
-
-        // 启动自动刷新
+        loadDataOnce()
         startAutoRefresh()
     }
 
@@ -175,7 +139,7 @@ class TaskManagerViewModel @Inject constructor(
 
     override fun onStart(owner: LifecycleOwner) {
         super.onStart(owner)
-        startAutoRefresh()
+        viewModelScope.launch { loadData() }
         Log.d(TAG, "onStart: 自动刷新已恢复")
     }
 
